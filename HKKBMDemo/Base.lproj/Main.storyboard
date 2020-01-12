@@ -35,6 +35,9 @@
                                                         <subviews>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UyE-f6-4jF">
                                                                 <rect key="frame" x="133" y="0.0" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="segueToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="9HQ-LE-lPN"/>
+                                                                </connections>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gZ-z5-TtT">
                                                                 <rect key="frame" x="133" y="36" width="49" height="20.5"/>
@@ -56,6 +59,9 @@
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mUO-uX-6j4">
                                                                 <rect key="frame" x="133" y="123" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="rotationGesturesToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="73L-0T-4bL"/>
+                                                                </connections>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rotation Gestures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgj-IC-hOB">
                                                                 <rect key="frame" x="44.5" y="159" width="137.5" height="20.5"/>
@@ -95,6 +101,9 @@
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uOp-3i-5dy">
                                                                 <rect key="frame" x="0.0" y="61.5" width="184" height="31"/>
+                                                                <connections>
+                                                                    <action selector="panGesturesToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="TYr-rn-zs9"/>
+                                                                </connections>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pan Gestures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZK-uV-Xa6">
                                                                 <rect key="frame" x="0.0" y="97.5" width="182" height="20.5"/>
@@ -104,6 +113,9 @@
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDk-aG-Lrf">
                                                                 <rect key="frame" x="0.0" y="123" width="184" height="31"/>
+                                                                <connections>
+                                                                    <action selector="pinchGesturesToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="7v1-0Y-wcU"/>
+                                                                </connections>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinch Gestures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG0-gi-0cj">
                                                                 <rect key="frame" x="0.0" y="159" width="182" height="20.5"/>
@@ -232,9 +244,11 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="ZNC-Ra-Jij" id="dy2-PZ-zzJ"/>
+                        <outlet property="deviceRotationSwitch" destination="R0Y-pJ-y0a" id="7dn-C6-bM5"/>
                         <outlet property="journalTextView" destination="Ji3-HD-09G" id="ZT3-7x-oFt"/>
                         <outlet property="nameTextField" destination="ejI-my-zuR" id="z4I-Yv-IWs"/>
                         <outlet property="scrollView" destination="4Ek-di-xIs" id="Boe-OJ-BBe"/>
+                        <outlet property="segueSwitch" destination="UyE-f6-4jF" id="Sqr-St-ph1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

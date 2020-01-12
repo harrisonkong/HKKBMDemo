@@ -15,22 +15,48 @@ class ViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var segueSwitch: UISwitch!
+    @IBOutlet weak var deviceRotationSwitch: UISwitch!
+
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var journalTextView: UITextView!
     
-    
     var kbManager : HKUIKeyboardManagerScrollable?
+    
+    @IBAction func segueToggled(_ sender: UISwitch) {
+        kbManager?.dismissDuringSegue = sender.isOn
+        
+        if !sender.isOn && !deviceRotationSwitch.isOn {
+            deviceRotationSwitch.isOn = true
+        }
+    }
     
     @IBAction func deviceRotationToggled(_ sender: UISwitch) {
         kbManager?.dismissDuringDeviceRotation = sender.isOn
-    }
-    
-    @IBAction func scrollActiveFieldToggled(_ sender: UISwitch) {
-        kbManager?.keepActiveFieldInView = sender.isOn
+        
+        if !sender.isOn && !segueSwitch.isOn {
+            segueSwitch.isOn = true
+        }
     }
     
     @IBAction func tapGesturesToggled(_ sender: UISwitch) {
         kbManager?.dismissOnTapGestures = sender.isOn
+    }
+    
+    @IBAction func panGesturesToggled(_ sender: UISwitch) {
+        kbManager?.dismissOnPanGestures = sender.isOn
+    }
+    
+    @IBAction func rotationGesturesToggled(_ sender: UISwitch) {
+        kbManager?.dismissOnRotationGestures = sender.isOn
+    }
+    
+    @IBAction func pinchGesturesToggle(_ sender: UISwitch) {
+        kbManager?.dismissOnPinchGestures = sender.isOn
+    }
+    
+    @IBAction func scrollActiveFieldToggled(_ sender: UISwitch) {
+        kbManager?.keepActiveFieldInView = sender.isOn
     }
     
     override func viewDidLoad() {
