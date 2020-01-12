@@ -14,6 +14,9 @@
 		C98EEA6D23CA93E00027F2CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98EEA6C23CA93E00027F2CB /* Assets.xcassets */; };
 		C98EEA7023CA93E00027F2CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98EEA6E23CA93E00027F2CB /* LaunchScreen.storyboard */; };
 		C98EEA7923CAACD80027F2CB /* UIView+HKUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA7823CAACD80027F2CB /* UIView+HKUtilities.swift */; };
+		C98EEA7C23CACFF40027F2CB /* HKUIKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA7A23CACFF40027F2CB /* HKUIKeyboardManager.swift */; };
+		C98EEA7D23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA7B23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift */; };
+		C98EEA7F23CAD0120027F2CB /* HKDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA7E23CAD0120027F2CB /* HKDebug.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		C98EEA6F23CA93E00027F2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C98EEA7123CA93E00027F2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C98EEA7823CAACD80027F2CB /* UIView+HKUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+HKUtilities.swift"; sourceTree = "<group>"; };
+		C98EEA7A23CACFF40027F2CB /* HKUIKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKUIKeyboardManager.swift; sourceTree = "<group>"; };
+		C98EEA7B23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKUIKeyboardManagerScrollable.swift; sourceTree = "<group>"; };
+		C98EEA7E23CAD0120027F2CB /* HKDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKDebug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +64,14 @@
 		C98EEA6223CA93D80027F2CB /* HKKBMDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C98EEA7823CAACD80027F2CB /* UIView+HKUtilities.swift */,
+				C98EEA7E23CAD0120027F2CB /* HKDebug.swift */,
+				C98EEA7A23CACFF40027F2CB /* HKUIKeyboardManager.swift */,
+				C98EEA7B23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift */,
 				C98EEA6323CA93D80027F2CB /* AppDelegate.swift */,
 				C98EEA6523CA93D80027F2CB /* SceneDelegate.swift */,
 				C98EEA6723CA93D80027F2CB /* ViewController.swift */,
 				C98EEA6923CA93D80027F2CB /* Main.storyboard */,
-				C98EEA7823CAACD80027F2CB /* UIView+HKUtilities.swift */,
 				C98EEA6C23CA93E00027F2CB /* Assets.xcassets */,
 				C98EEA6E23CA93E00027F2CB /* LaunchScreen.storyboard */,
 				C98EEA7123CA93E00027F2CB /* Info.plist */,
@@ -141,10 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C98EEA7D23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift in Sources */,
 				C98EEA6823CA93D80027F2CB /* ViewController.swift in Sources */,
 				C98EEA6423CA93D80027F2CB /* AppDelegate.swift in Sources */,
 				C98EEA7923CAACD80027F2CB /* UIView+HKUtilities.swift in Sources */,
+				C98EEA7C23CACFF40027F2CB /* HKUIKeyboardManager.swift in Sources */,
 				C98EEA6623CA93D80027F2CB /* SceneDelegate.swift in Sources */,
+				C98EEA7F23CAD0120027F2CB /* HKDebug.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

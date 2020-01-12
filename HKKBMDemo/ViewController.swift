@@ -15,18 +15,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var journalTextView: UITextView!
+    
+    var kbManager : HKUIKeyboardManagerScrollable?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         containerView.backgroundColor = .red
         scrollView.backgroundColor = .green
 
+        kbManager = HKUIKeyboardManagerScrollable(ownerView: scrollView, outermostView: view)
+        kbManager?.registerEditableField(nameTextField)
+        kbManager?.registerEditableField(journalTextView)
     }
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
-        print("viewWillLayoutSubviews(): containerView.contentMinBox is \(scrollView.contentMinBox())")
         
         if heightConstraint != nil {
           heightConstraint?.constant = containerView.contentMinBox().height + 20
@@ -37,9 +43,12 @@ class ViewController: UIViewController {
             
           heightConstraint?.isActive = true
         }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
         
-//        scrollView.contentSize.height = scrollView.contentMinBox().height + 150
-
+        kbManager?.viewWillTransition()
     }
 }
 

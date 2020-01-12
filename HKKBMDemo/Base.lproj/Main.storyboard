@@ -223,6 +223,8 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="ZNC-Ra-Jij" id="dy2-PZ-zzJ"/>
+                        <outlet property="journalTextView" destination="Ji3-HD-09G" id="ZT3-7x-oFt"/>
+                        <outlet property="nameTextField" destination="ejI-my-zuR" id="z4I-Yv-IWs"/>
                         <outlet property="scrollView" destination="4Ek-di-xIs" id="Boe-OJ-BBe"/>
                     </connections>
                 </viewController>
