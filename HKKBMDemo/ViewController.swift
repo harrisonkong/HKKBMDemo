@@ -18,7 +18,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var journalTextView: UITextView!
     
+    
     var kbManager : HKUIKeyboardManagerScrollable?
+    
+    @IBAction func deviceRotationToggled(_ sender: UISwitch) {
+        kbManager?.dismissDuringDeviceRotation = sender.isOn
+    }
+    
+    @IBAction func scrollActiveFieldToggled(_ sender: UISwitch) {
+        kbManager?.keepActiveFieldInView = sender.isOn
+    }
+    
+    @IBAction func tapGesturesToggled(_ sender: UISwitch) {
+        kbManager?.dismissOnTapGestures = sender.isOn
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
