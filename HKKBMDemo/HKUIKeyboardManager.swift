@@ -418,6 +418,8 @@ public class HKUIKeyboardManager : NSObject {
         // Rotation while other screen is on top will cause problems
         // Since we are processing rotations, let's disable it
         // (see notes 2., 3., and 4. above)
+        
+        HKDebug.print("--- begins ---", category: "viewWillTransition()")
       
         if !dismissDuringSegue {
             dismissDuringSegue = true
@@ -429,6 +431,8 @@ public class HKUIKeyboardManager : NSObject {
             HKDebug.print("Device rotated - dismissing keyboard by endEditing", category: "viewWillTransition()")
             endEditingInAllTextFields()
         }
+        
+        HKDebug.print("--- ends ---", category: "viewWillTransition()")
       
     }
     

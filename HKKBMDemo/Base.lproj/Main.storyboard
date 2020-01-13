@@ -87,7 +87,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UPz-ll-xkz" userLabel="Right Stack">
                                                         <rect key="frame" x="232" y="0.0" width="182" height="241"/>
                                                         <subviews>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R0Y-pJ-y0a">
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R0Y-pJ-y0a">
                                                                 <rect key="frame" x="0.0" y="0.0" width="184" height="31"/>
                                                                 <connections>
                                                                     <action selector="deviceRotationToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="iFY-s0-emn"/>
@@ -123,9 +123,10 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4x-6c-3hH">
-                                                                <rect key="frame" x="0.0" y="184.5" width="184" height="31"/>
-                                                            </switch>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJn-Jz-gfT">
+                                                                <rect key="frame" x="0.0" y="184.5" width="182" height="31"/>
+                                                                <state key="normal" title="Segue Test..."/>
+                                                            </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmL-Ca-nqi">
                                                                 <rect key="frame" x="0.0" y="220.5" width="182" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -144,20 +145,19 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oI1-JY-72R" userLabel="Boat Box">
                                                 <rect key="frame" x="25" y="336" width="364" height="150"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Drag the boat around!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qnz-ar-whX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="textColor" red="0.0" green="0.14653693009999999" blue="0.37443329019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag the boat around!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ac-Gi-PYH">
+                                                        <rect key="frame" x="0.0" y="5" width="364" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" red="0.0" green="0.137733096" blue="0.48658112050000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.21207882955825552" green="0.87522226623360233" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="9St-7E-f4z"/>
-                                                    <constraint firstItem="Qnz-ar-whX" firstAttribute="top" secondItem="oI1-JY-72R" secondAttribute="top" id="AAk-Ts-IEU"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Qnz-ar-whX" secondAttribute="trailing" id="C21-6h-DrP"/>
-                                                    <constraint firstItem="Qnz-ar-whX" firstAttribute="leading" secondItem="oI1-JY-72R" secondAttribute="leading" id="s86-x5-gck"/>
+                                                    <constraint firstItem="8ac-Gi-PYH" firstAttribute="top" secondItem="oI1-JY-72R" secondAttribute="top" constant="5" id="JTf-dB-H9z"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8ac-Gi-PYH" secondAttribute="trailing" id="MjM-oV-gXs"/>
+                                                    <constraint firstItem="8ac-Gi-PYH" firstAttribute="leading" secondItem="oI1-JY-72R" secondAttribute="leading" id="rbY-ed-VV0"/>
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="What should we name the boat?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejI-my-zuR" userLabel="Name Field">
@@ -172,19 +172,18 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIC-qX-IWT" userLabel="Helm Box">
                                                 <rect key="frame" x="25" y="581" width="364" height="160"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rotate and Pinch!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VyN-Rs-9Vd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rotate and pinch!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33b-xb-LK8">
+                                                        <rect key="frame" x="0.0" y="5" width="364" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" red="0.21207882959999999" green="0.87522226619999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="0.13773309595209049" blue="0.48658112046632129" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="VyN-Rs-9Vd" secondAttribute="trailing" id="0d5-aK-EUM"/>
-                                                    <constraint firstItem="VyN-Rs-9Vd" firstAttribute="top" secondItem="WIC-qX-IWT" secondAttribute="top" id="9Ba-ev-7af"/>
-                                                    <constraint firstItem="VyN-Rs-9Vd" firstAttribute="leading" secondItem="WIC-qX-IWT" secondAttribute="leading" id="URa-uB-BDp"/>
+                                                    <constraint firstItem="33b-xb-LK8" firstAttribute="top" secondItem="WIC-qX-IWT" secondAttribute="top" constant="5" id="B10-eQ-VPG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="33b-xb-LK8" secondAttribute="trailing" id="aVV-Ab-7wZ"/>
+                                                    <constraint firstItem="33b-xb-LK8" firstAttribute="leading" secondItem="WIC-qX-IWT" secondAttribute="leading" id="vIL-XC-go0"/>
                                                     <constraint firstAttribute="height" constant="160" id="zsf-KM-ghQ"/>
                                                 </constraints>
                                             </view>

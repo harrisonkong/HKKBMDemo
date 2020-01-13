@@ -9,9 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: - Properties
+    // MARK: -
 
     private var heightConstraint : NSLayoutConstraint?
 
+    // MARK: - IB Outlets
+    // MARK: -
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var containerView: UIView!
     
@@ -22,6 +28,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var journalTextView: UITextView!
     
     var kbManager : HKUIKeyboardManagerScrollable?
+    
+    // MARK: - IB Actions
+    // MARK: -
     
     @IBAction func segueToggled(_ sender: UISwitch) {
         kbManager?.dismissDuringSegue = sender.isOn
@@ -59,6 +68,9 @@ class ViewController: UIViewController {
         kbManager?.keepActiveFieldInView = sender.isOn
     }
     
+    // MARK: - Lifecycle
+    // MARK: -
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,6 +78,7 @@ class ViewController: UIViewController {
         scrollView.backgroundColor = .green
 
         kbManager = HKUIKeyboardManagerScrollable(ownerView: scrollView, outermostView: view)
+        kbManager?.dismissDuringDeviceRotation = false
         kbManager?.registerEditableField(nameTextField)
         kbManager?.registerEditableField(journalTextView)
     }
