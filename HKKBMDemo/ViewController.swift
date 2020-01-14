@@ -16,7 +16,8 @@ class ViewController: UIViewController {
 
     private var heightConstraint : NSLayoutConstraint?
     var kbManager : HKUIKeyboardManagerScrollable?
-    var bellPlayer:AVAudioPlayer? = nil
+    var bellPlayer : AVAudioPlayer?
+    var zPlayer: AVAudioPlayer?
     private let zRecognizer = ZGestureRecognizer()
     
     // MARK: - IB Outlets
@@ -45,6 +46,10 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func handleCustomGesture(_ sender: UIGestureRecognizer) {
+        flashZ()
+    }
+    
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
         let translation = recognizer.translation(in: boatBox)
                 
@@ -132,17 +137,9 @@ class ViewController: UIViewController {
         containerView.backgroundColor = .orange
         scrollView.backgroundColor = .blue
 
-        // load the bell sound
-        if let url = Bundle.main.url(forResource: "ship-bell", withExtension: "mp3") {
-            bellPlayer = AVAudioPlayer()
-            do {
-              try bellPlayer = AVAudioPlayer(contentsOf: url)
-              bellPlayer?.prepareToPlay()
-            } catch {
-              print("Failed to load audio resource \(url): \(error.localizedDescription)")
-            }
-        }
-
+        bellPlayer = makeAudioPlayer(resourceName: "ship-bell")
+        zPlayer = makeAudioPlayer(resourceName: "scratch")
+        
         kbManager = HKUIKeyboardManagerScrollable(ownerView: scrollView, outermostView: view)
         kbManager?.dismissDuringDeviceRotation = false
         kbManager?.registerEditableField(nameTextField)
@@ -150,7 +147,7 @@ class ViewController: UIViewController {
         
         // add custom Z gesture recognizer
         
-        view.addGestureRecognizer(zRecognizer)
+        zRecognizer.addTarget(self, action: #selector(handleCustomGesture(_:)))
         kbManager?.registerCustomGestureRecognizer(zRecognizer)
 
     }
@@ -180,6 +177,33 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
           kbManager?.preparingSegue()
+    }
+    
+    // MARK: - Private Methods
+    // MARK: -
+    
+    private func flashZ() {
+        
+        let side = view.shorterEdgeLength()
+        
+        let imageView = UIImageView(frame: CGRect(x: (view.frame.size.width - side) / 2.0, y: (view.frame.size.height - side) / 2.0, width: side, height: side))
+        let image = UIImage(named: "z.png")
+        imageView.image = image
+        view.addSubview(imageView)
+        
+        self.zPlayer?.play()
+    }
+    
+    private func makeAudioPlayer(resourceName: String) -> AVAudioPlayer {
+        let url = Bundle.main.url(forResource: resourceName, withExtension: "mp3")
+        var player = AVAudioPlayer()
+        do {
+            try player = AVAudioPlayer(contentsOf: url!)
+            player.prepareToPlay()
+        } catch {
+            print("Unable to load audio resource \(url!): \(error.localizedDescription)")
+        }
+        return player
     }
 }
 

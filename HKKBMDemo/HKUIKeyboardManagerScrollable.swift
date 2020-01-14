@@ -91,9 +91,13 @@
        }
 
     4. If you would like the keyboard to be dismissed upon custom gestures,
-      register your own custom gesture recognizers
+      register your own custom gesture recognizers. You can add additional
+      action targets for these gesture recognizers but do not add them to
+      any views or assign delegates to them. The keyboard manager will handle
+      that.
  
       ...
+      tripleTapRecognizer.addTarget(self, action: #selector(handle3Taps(_:)))
       HKUIKeyboardManager?.registerCustomGestureRecognizer(tripleTapRecognizer)
       ...
  

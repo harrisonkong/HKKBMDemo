@@ -35,10 +35,10 @@ import UIKit
 
 extension UIView {
   
-  // MARK: - Public Methods
-  // MARK: -
+    // MARK: - Public Methods
+    // MARK: -
   
-  func contentMinBox() -> CGSize {
+    func contentMinBox() -> CGSize {
 
       //  example:
       //
@@ -62,21 +62,29 @@ extension UIView {
       //  |                                |
       //  +--------------------------------+
       
-      var minBox = CGRect()
+        var minBox = CGRect()
       
-      for subview in self.subviews {
-          minBox = minBox.union(subview.frame)
-      }
+        for subview in self.subviews {
+            minBox = minBox.union(subview.frame)
+        }
       
-      return minBox.size
-  }
+        return minBox.size
+    }
   
-  public final func isLandscape() -> Bool {
-      return !isPortrait()
-  }
+    public final func isLandscape() -> Bool {
+        return !isPortrait()
+    }
   
-  public final func isPortrait() -> Bool {
-      return frame.size.width <= frame.size.height
-  }
+    public final func isPortrait() -> Bool {
+        return frame.size.width <= frame.size.height
+    }
+    
+    public final func longerEdgeLength() -> CGFloat {
+        return isLandscape() ? frame.size.width : frame.size.height
+    }
+    
+    public final func shorterEdgeLength() -> CGFloat {
+        return isLandscape() ? frame.size.height : frame.size.width
+    }
   
 }
