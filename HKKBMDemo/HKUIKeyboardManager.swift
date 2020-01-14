@@ -1,5 +1,5 @@
 //
-//  HKUIKBManager.swift
+//  HKUIKeyboardManager.swift
 //  HK Keyboard Manager
 //
 

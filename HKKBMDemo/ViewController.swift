@@ -6,6 +6,14 @@
 //  Copyright © 2020 skyRoute66. All rights reserved.
 //
 
+//  Dependencies
+//  -----------------------------------------------------------------
+//  HKDebug
+//  HKUIButton
+//  HKUIKeyboardManager
+//  HKUIKeyboardManagerScrollable
+//  UIView+HKUtilities
+
 import UIKit
 import AVFoundation
 
@@ -178,7 +186,6 @@ class ViewController: UIViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        
         kbManager?.viewWillTransition()
     }
     
@@ -186,7 +193,8 @@ class ViewController: UIViewController {
     // MARK: -
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-          kbManager?.preparingSegue()
+        super.prepare(for: segue, sender: sender)
+        kbManager?.preparingSegue()
     }
     
     // MARK: - Private Methods
@@ -228,3 +236,14 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: -
+// MARK: -
+
+extension ViewController : UIGestureRecognizerDelegate {
+  
+    // MARK: UIGestureRecognizerDelegate Protocol
+  
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+}

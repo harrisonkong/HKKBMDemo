@@ -452,13 +452,13 @@
                 <pinchGestureRecognizer id="QgV-U8-hid">
                     <connections>
                         <action selector="handlePinchWithRecognizer:" destination="BYZ-38-t0r" id="awp-oy-WmI"/>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="0au-iy-QZO"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="mgN-pe-iTw"/>
                     </connections>
                 </pinchGestureRecognizer>
                 <rotationGestureRecognizer id="vQ3-SN-YTQ">
                     <connections>
                         <action selector="handleRotateWithRecognizer:" destination="BYZ-38-t0r" id="dim-AE-ITm"/>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="ccu-wH-Z95"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="UOG-BE-kWA"/>
                     </connections>
                 </rotationGestureRecognizer>
                 <tapGestureRecognizer id="Aqk-nT-yIp">

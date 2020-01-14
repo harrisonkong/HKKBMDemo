@@ -1,6 +1,6 @@
 //
 //  HKUIKeyboardManagerScrollable.swift
-//  HK Keyboard Manager for Scrollable
+//  HK Keyboard Manager for Scrollable Views
 //
 
 ///  MIT License
@@ -34,6 +34,7 @@
 //  Dependencies
 //  -----------------------------------------------------------------
 //  HKDebug
+//  HKUIKeyboardManager
 //  UIView+HKUtilities
 
 //  How To Use
