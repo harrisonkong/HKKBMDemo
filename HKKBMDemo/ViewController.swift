@@ -28,17 +28,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var segueSwitch: UISwitch!
     @IBOutlet weak var deviceRotationSwitch: UISwitch!
-
+    @IBOutlet weak var segueTestButton: UIButton!
+    
     @IBOutlet weak var boat: UIImageView!
     @IBOutlet weak var boatBox: UIView!
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var journalTextView: UITextView!
-    
-//    @IBOutlet weak var tapGestureRecognizer: UITapGestureRecognizer!
-//    @IBOutlet weak var pinchGestureRecognizer: UIPinchGestureRecognizer!
-//    @IBOutlet weak var rotationGestureRecognizer: UIRotationGestureRecognizer!
-    
+        
     // MARK: - IB Actions
     // MARK: -
     
@@ -47,7 +44,11 @@ class ViewController: UIViewController {
         
         if !sender.isOn && !segueSwitch.isOn {
             segueSwitch.isOn = true
+            kbManager?.dismissDuringSegue = true
         }
+        
+        segueTestButton.isEnabled = sender.isOn
+
     }
 
     @IBAction func handleCustomGesture(_ sender: UIGestureRecognizer) {
@@ -125,7 +126,10 @@ class ViewController: UIViewController {
         
         if !sender.isOn && !deviceRotationSwitch.isOn {
             deviceRotationSwitch.isOn = true
+            kbManager?.dismissDuringDeviceRotation = true
         }
+
+        segueTestButton.isEnabled = true
     }
     
     @IBAction func tapGesturesToggled(_ sender: UISwitch) {
@@ -152,9 +156,6 @@ class ViewController: UIViewController {
         // add custom Z gesture recognizer
         
         zRecognizer.addTarget(self, action: #selector(handleCustomGesture(_:)))
-//        zRecognizer.require(toFail: pinchGestureRecognizer)
-//        zRecognizer.require(toFail: rotationGestureRecognizer)
-//        tapGestureRecognizer.require(toFail: zRecognizer)
         kbManager?.registerCustomGestureRecognizer(zRecognizer)
 
     }
@@ -171,6 +172,8 @@ class ViewController: UIViewController {
             
           heightConstraint?.isActive = true
         }
+        
+        segueSwitch.isOn = true  // must dismiss on segue if device rotates
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

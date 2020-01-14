@@ -29,7 +29,7 @@
 //
 //  Version History
 //  -----------------------------------------------------------------
-//  1.0.0     -     initial release
+//  1.0.0     - 2020/01/01 - initial release
 
 class HKDebug {
   
