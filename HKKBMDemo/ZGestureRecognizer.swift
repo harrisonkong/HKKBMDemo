@@ -50,12 +50,21 @@ public class ZGestureRecognizer : UIGestureRecognizer {
     
     override public func touchesBegan(_ touches: Set<UITouch>, with Event: UIEvent) {
         
-        if let touch = touches.first {
-            currentPassStart = touch.location(in: self.view)
+        if touches.count > 1 {
+            state = .failed
+        } else {
+            if let touch = touches.first {
+                currentPassStart = touch.location(in: self.view)
+            }
         }
     }
     
     override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
+        
+        if touches.count > 1 {
+            state = .failed
+            return
+        }
         
         guard let touch = touches.first
             else { return }
@@ -65,8 +74,8 @@ public class ZGestureRecognizer : UIGestureRecognizer {
         var currentDirection : Direction
         currentDirection = moveAmt < 0 ? .DirectionLeft : .DirectionRight
         
-        if abs(moveAmt) < minPassDistance { return }
-        
+        if abs(moveAmt) < minPassDistance { return }        
+
         if lastDirection == .DirectionUndetermined || (lastDirection == .DirectionLeft && currentDirection == .DirectionRight) || (lastDirection == .DirectionRight && currentDirection == .DirectionLeft) {
 
             if currentDirection == .DirectionRight {
@@ -76,7 +85,7 @@ public class ZGestureRecognizer : UIGestureRecognizer {
             currentPassStart = touchPoint
             lastDirection = currentDirection
             
-            if state == .possible && leftToRightPassesCount >= requiredPasses{
+            if state == .possible && leftToRightPassesCount >= requiredPasses {
                 state = .ended
             }
         }

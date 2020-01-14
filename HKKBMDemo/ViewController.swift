@@ -34,7 +34,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var journalTextView: UITextView!
-            
+    
+//    @IBOutlet weak var tapGestureRecognizer: UITapGestureRecognizer!
+//    @IBOutlet weak var pinchGestureRecognizer: UIPinchGestureRecognizer!
+//    @IBOutlet weak var rotationGestureRecognizer: UIRotationGestureRecognizer!
+    
     // MARK: - IB Actions
     // MARK: -
     
@@ -148,6 +152,9 @@ class ViewController: UIViewController {
         // add custom Z gesture recognizer
         
         zRecognizer.addTarget(self, action: #selector(handleCustomGesture(_:)))
+//        zRecognizer.require(toFail: pinchGestureRecognizer)
+//        zRecognizer.require(toFail: rotationGestureRecognizer)
+//        tapGestureRecognizer.require(toFail: zRecognizer)
         kbManager?.registerCustomGestureRecognizer(zRecognizer)
 
     }
@@ -192,6 +199,11 @@ class ViewController: UIViewController {
         view.addSubview(imageView)
         
         self.zPlayer?.play()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            // remove it after a second
+            imageView.removeFromSuperview()
+        }
     }
     
     private func makeAudioPlayer(resourceName: String) -> AVAudioPlayer {
