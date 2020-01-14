@@ -9,12 +9,24 @@
 import UIKit
 
 class SegueTestViewController: UIViewController {
-
+    
+    // MARK: - IB Outlets
+    // MARK: -
+    
+    @IBOutlet weak var logoImage: UIImageView!
+    
     // MARK: - IB Actions
     // MARK: -
     
     @IBAction func tappedAnywhere(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Lifecycle
+    // MARK: -
+        
+    override func viewDidLayoutSubviews() {
+        logoImage.layer.cornerRadius = logoImage.frame.size.height / 4.0
     }
     
 }

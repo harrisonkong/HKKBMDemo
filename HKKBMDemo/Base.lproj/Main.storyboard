@@ -381,9 +381,16 @@
                                     <action selector="tappedAnywhere:" destination="n3w-LL-etw" eventType="touchUpInside" id="10V-HV-rfC"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skyRoute66.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aZU-xF-TtG">
+                                <rect key="frame" x="102" y="161" width="210.5" height="210.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aZU-xF-TtG" secondAttribute="height" multiplier="1:1" id="g4I-br-7P0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="aZU-xF-TtG" firstAttribute="height" secondItem="2M2-ah-rob" secondAttribute="height" multiplier="0.25" id="3he-0K-NSX"/>
                             <constraint firstItem="2M2-ah-rob" firstAttribute="centerX" secondItem="bJ3-1D-4VA" secondAttribute="centerX" id="6bx-el-8Je"/>
                             <constraint firstItem="2M2-ah-rob" firstAttribute="width" secondItem="bJ3-1D-4VA" secondAttribute="width" id="GDl-Wl-6g7"/>
                             <constraint firstItem="KFd-lD-WkK" firstAttribute="top" secondItem="fPG-61-qs9" secondAttribute="bottom" constant="30" id="SlS-o7-DJf"/>
@@ -392,10 +399,15 @@
                             <constraint firstItem="fPG-61-qs9" firstAttribute="centerX" secondItem="bJ3-1D-4VA" secondAttribute="centerX" id="ZFQ-nV-hq3"/>
                             <constraint firstItem="KFd-lD-WkK" firstAttribute="width" secondItem="fPG-61-qs9" secondAttribute="width" id="c5d-9o-Ife"/>
                             <constraint firstItem="2M2-ah-rob" firstAttribute="height" secondItem="bJ3-1D-4VA" secondAttribute="height" id="cc7-1i-l4c"/>
+                            <constraint firstItem="fPG-61-qs9" firstAttribute="top" secondItem="aZU-xF-TtG" secondAttribute="bottom" constant="35" id="g9L-Gv-l7X"/>
+                            <constraint firstItem="aZU-xF-TtG" firstAttribute="centerX" secondItem="bJ3-1D-4VA" secondAttribute="centerX" id="j52-d7-ava"/>
                             <constraint firstItem="KFd-lD-WkK" firstAttribute="centerX" secondItem="bJ3-1D-4VA" secondAttribute="centerX" id="ota-Nj-0kd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f1M-Pd-Krf"/>
                     </view>
+                    <connections>
+                        <outlet property="logoImage" destination="aZU-xF-TtG" id="C4j-Lk-flB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgs-id-Ylv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -405,5 +417,6 @@
     <resources>
         <image name="helm.png" width="409.60000610351562" height="409.60000610351562"/>
         <image name="sailboat.png" width="384" height="384"/>
+        <image name="skyRoute66.jpg" width="1024" height="1024"/>
     </resources>
 </document>

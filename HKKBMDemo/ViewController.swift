@@ -209,16 +209,22 @@ class ViewController: UIViewController {
         }
     }
     
-    private func makeAudioPlayer(resourceName: String) -> AVAudioPlayer {
-        let url = Bundle.main.url(forResource: resourceName, withExtension: "mp3")
-        var player = AVAudioPlayer()
+    private func makeAudioPlayer(resourceName: String) -> AVAudioPlayer? {
+        
+        var player : AVAudioPlayer
+
+        guard let url = Bundle.main.url(forResource: resourceName, withExtension: "mp3")
+            else { return nil }
+
         do {
-            try player = AVAudioPlayer(contentsOf: url!)
+            try player = AVAudioPlayer(contentsOf: url)
             player.prepareToPlay()
+            return player
         } catch {
-            print("Unable to load audio resource \(url!): \(error.localizedDescription)")
+            print("Unable to load audio resource \(url): \(error.localizedDescription)")
+            return nil
         }
-        return player
+
     }
 }
 
