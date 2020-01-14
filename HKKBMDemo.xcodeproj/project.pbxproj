@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C961132323CD1DEB00E5986B /* sailboat.png in Resources */ = {isa = PBXBuildFile; fileRef = C961132223CD1DEB00E5986B /* sailboat.png */; };
+		C961132523CD3B1E00E5986B /* helm.png in Resources */ = {isa = PBXBuildFile; fileRef = C961132423CD3B1E00E5986B /* helm.png */; };
+		C961132723CD41D000E5986B /* ship-bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C961132623CD41D000E5986B /* ship-bell.mp3 */; };
 		C98EEA6423CA93D80027F2CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA6323CA93D80027F2CB /* AppDelegate.swift */; };
 		C98EEA6623CA93D80027F2CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA6523CA93D80027F2CB /* SceneDelegate.swift */; };
 		C98EEA6823CA93D80027F2CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA6723CA93D80027F2CB /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C961132223CD1DEB00E5986B /* sailboat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sailboat.png; sourceTree = "<group>"; };
+		C961132423CD3B1E00E5986B /* helm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helm.png; sourceTree = "<group>"; };
+		C961132623CD41D000E5986B /* ship-bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ship-bell.mp3"; sourceTree = "<group>"; };
 		C98EEA6023CA93D80027F2CB /* HKKBMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKKBMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98EEA6323CA93D80027F2CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C98EEA6523CA93D80027F2CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 		C98EEA6223CA93D80027F2CB /* HKKBMDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C961132623CD41D000E5986B /* ship-bell.mp3 */,
+				C961132423CD3B1E00E5986B /* helm.png */,
+				C961132223CD1DEB00E5986B /* sailboat.png */,
 				C98EEA7823CAACD80027F2CB /* UIView+HKUtilities.swift */,
 				C98EEA7E23CAD0120027F2CB /* HKDebug.swift */,
 				C98EEA7A23CACFF40027F2CB /* HKUIKeyboardManager.swift */,
@@ -138,7 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C98EEA7023CA93E00027F2CB /* LaunchScreen.storyboard in Resources */,
+				C961132723CD41D000E5986B /* ship-bell.mp3 in Resources */,
+				C961132523CD3B1E00E5986B /* helm.png in Resources */,
 				C98EEA6D23CA93E00027F2CB /* Assets.xcassets in Resources */,
+				C961132323CD1DEB00E5986B /* sailboat.png in Resources */,
 				C98EEA6B23CA93D80027F2CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

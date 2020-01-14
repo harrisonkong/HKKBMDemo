@@ -99,7 +99,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uOp-3i-5dy">
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uOp-3i-5dy">
                                                                 <rect key="frame" x="0.0" y="61.5" width="184" height="31"/>
                                                                 <connections>
                                                                     <action selector="panGesturesToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="TYr-rn-zs9"/>
@@ -151,12 +151,25 @@
                                                         <color key="textColor" red="0.0" green="0.137733096" blue="0.48658112050000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sailboat.png" translatesAutoresizingMaskIntoConstraints="NO" id="UM7-Mr-Io3">
+                                                        <rect key="frame" x="144.5" y="37.5" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="UM7-Mr-Io3" secondAttribute="height" multiplier="1:1" id="whX-SG-3nc"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="7vm-XT-xya" appends="YES" id="rdq-Rw-D5Z"/>
+                                                        </connections>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.21207882955825552" green="0.87522226623360233" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
+                                                    <constraint firstItem="UM7-Mr-Io3" firstAttribute="centerX" secondItem="oI1-JY-72R" secondAttribute="centerX" id="0PF-iA-Uxf"/>
+                                                    <constraint firstItem="UM7-Mr-Io3" firstAttribute="centerY" secondItem="oI1-JY-72R" secondAttribute="centerY" id="4NO-Qa-FlG"/>
                                                     <constraint firstAttribute="height" constant="150" id="9St-7E-f4z"/>
                                                     <constraint firstItem="8ac-Gi-PYH" firstAttribute="top" secondItem="oI1-JY-72R" secondAttribute="top" constant="5" id="JTf-dB-H9z"/>
                                                     <constraint firstAttribute="trailing" secondItem="8ac-Gi-PYH" secondAttribute="trailing" id="MjM-oV-gXs"/>
+                                                    <constraint firstItem="UM7-Mr-Io3" firstAttribute="height" secondItem="oI1-JY-72R" secondAttribute="height" multiplier="0.5" id="iLi-ls-2Vu"/>
                                                     <constraint firstItem="8ac-Gi-PYH" firstAttribute="leading" secondItem="oI1-JY-72R" secondAttribute="leading" id="rbY-ed-VV0"/>
                                                 </constraints>
                                             </view>
@@ -178,11 +191,36 @@
                                                         <color key="textColor" red="0.21207882959999999" green="0.87522226619999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helm.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZGV-xq-vlU">
+                                                        <rect key="frame" x="142" y="40" width="80" height="80"/>
+                                                        <gestureRecognizers/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="ZGV-xq-vlU" secondAttribute="height" multiplier="1:1" id="esi-OQ-5mv"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="QgV-U8-hid" appends="YES" id="d8G-i1-cS9"/>
+                                                            <outletCollection property="gestureRecognizers" destination="vQ3-SN-YTQ" appends="YES" id="rAR-65-F9i"/>
+                                                            <outletCollection property="gestureRecognizers" destination="Aqk-nT-yIp" appends="YES" id="X8Z-Ma-ngr"/>
+                                                        </connections>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to ring bell!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTK-9S-QgJ">
+                                                        <rect key="frame" x="0.0" y="131" width="364" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" red="0.21207882959999999" green="0.87522226619999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="0.13773309595209049" blue="0.48658112046632129" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
+                                                    <constraint firstItem="OTK-9S-QgJ" firstAttribute="leading" secondItem="WIC-qX-IWT" secondAttribute="leading" id="1Fs-tx-d2Y"/>
+                                                    <constraint firstAttribute="trailing" secondItem="OTK-9S-QgJ" secondAttribute="trailing" id="38j-hR-il1"/>
                                                     <constraint firstItem="33b-xb-LK8" firstAttribute="top" secondItem="WIC-qX-IWT" secondAttribute="top" constant="5" id="B10-eQ-VPG"/>
+                                                    <constraint firstItem="ZGV-xq-vlU" firstAttribute="centerX" secondItem="WIC-qX-IWT" secondAttribute="centerX" id="GQ1-cn-Itq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="OTK-9S-QgJ" secondAttribute="bottom" constant="5" id="Ui9-FU-th4"/>
                                                     <constraint firstAttribute="trailing" secondItem="33b-xb-LK8" secondAttribute="trailing" id="aVV-Ab-7wZ"/>
+                                                    <constraint firstItem="ZGV-xq-vlU" firstAttribute="centerY" secondItem="WIC-qX-IWT" secondAttribute="centerY" id="eiS-h1-Rbj"/>
+                                                    <constraint firstItem="ZGV-xq-vlU" firstAttribute="height" secondItem="WIC-qX-IWT" secondAttribute="height" multiplier="0.5" id="jUA-O4-giJ"/>
                                                     <constraint firstItem="33b-xb-LK8" firstAttribute="leading" secondItem="WIC-qX-IWT" secondAttribute="leading" id="vIL-XC-go0"/>
                                                     <constraint firstAttribute="height" constant="160" id="zsf-KM-ghQ"/>
                                                 </constraints>
@@ -190,6 +228,7 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write a journal about your trip ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ji3-HD-09G" userLabel="Essay View">
                                                 <rect key="frame" x="25" y="761" width="364" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="Bzx-W6-PFj"/>
                                                 </constraints>
@@ -197,23 +236,50 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons by FreePik from www.flaticon.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6L-8t-8lK" userLabel="Icons Credit">
+                                                <rect key="frame" x="25" y="981" width="364" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bell sound by Mike Koening" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc2-Bq-fcI" userLabel="Sound Credit">
+                                                <rect key="frame" x="25" y="1003" width="364" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harrison Kong © skyRoute66" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvS-IM-Me6" userLabel="App Credit">
+                                                <rect key="frame" x="25" y="1030" width="364" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstItem="yc2-Bq-fcI" firstAttribute="top" secondItem="I6L-8t-8lK" secondAttribute="bottom" constant="5" id="00N-Jp-QFD"/>
                                             <constraint firstItem="Ji3-HD-09G" firstAttribute="leading" secondItem="WIC-qX-IWT" secondAttribute="leading" id="6P8-GJ-3kS"/>
                                             <constraint firstItem="WIC-qX-IWT" firstAttribute="leading" secondItem="ejI-my-zuR" secondAttribute="leading" id="93N-k2-pmB"/>
                                             <constraint firstItem="ejI-my-zuR" firstAttribute="trailing" secondItem="oI1-JY-72R" secondAttribute="trailing" id="9Ta-KO-OEy"/>
                                             <constraint firstItem="Ji3-HD-09G" firstAttribute="trailing" secondItem="WIC-qX-IWT" secondAttribute="trailing" id="AeO-gf-YJJ"/>
                                             <constraint firstItem="X1E-Ze-65N" firstAttribute="leading" secondItem="ZNC-Ra-Jij" secondAttribute="leading" id="Axq-AH-deI"/>
+                                            <constraint firstItem="yc2-Bq-fcI" firstAttribute="trailing" secondItem="I6L-8t-8lK" secondAttribute="trailing" id="ME4-hb-ubR"/>
+                                            <constraint firstItem="I6L-8t-8lK" firstAttribute="leading" secondItem="Ji3-HD-09G" secondAttribute="leading" id="MRs-gX-OFp"/>
+                                            <constraint firstItem="I6L-8t-8lK" firstAttribute="trailing" secondItem="Ji3-HD-09G" secondAttribute="trailing" id="N7f-9j-BSZ"/>
                                             <constraint firstItem="nFg-Ag-pm5" firstAttribute="leading" secondItem="ZNC-Ra-Jij" secondAttribute="leading" id="NHQ-Eb-n00"/>
                                             <constraint firstAttribute="trailing" secondItem="nFg-Ag-pm5" secondAttribute="trailing" id="S2W-WM-3N0"/>
                                             <constraint firstAttribute="trailing" secondItem="oI1-JY-72R" secondAttribute="trailing" constant="25" id="TEF-Of-Vf7"/>
+                                            <constraint firstItem="I6L-8t-8lK" firstAttribute="top" secondItem="Ji3-HD-09G" secondAttribute="bottom" constant="20" id="VVx-vc-1Gx"/>
                                             <constraint firstAttribute="trailing" secondItem="X1E-Ze-65N" secondAttribute="trailing" id="Ycy-vJ-m3r"/>
                                             <constraint firstItem="WIC-qX-IWT" firstAttribute="trailing" secondItem="ejI-my-zuR" secondAttribute="trailing" id="ZaL-P9-QUw"/>
                                             <constraint firstItem="nFg-Ag-pm5" firstAttribute="top" secondItem="ZNC-Ra-Jij" secondAttribute="top" constant="20" id="ZeJ-10-EvC"/>
+                                            <constraint firstItem="yc2-Bq-fcI" firstAttribute="leading" secondItem="I6L-8t-8lK" secondAttribute="leading" id="aZT-O2-acq"/>
                                             <constraint firstItem="WIC-qX-IWT" firstAttribute="top" secondItem="ejI-my-zuR" secondAttribute="bottom" constant="35" id="agL-UI-rcV"/>
                                             <constraint firstItem="X1E-Ze-65N" firstAttribute="top" secondItem="nFg-Ag-pm5" secondAttribute="bottom" constant="20" id="gim-N7-87c"/>
+                                            <constraint firstItem="hvS-IM-Me6" firstAttribute="top" secondItem="yc2-Bq-fcI" secondAttribute="bottom" constant="10" id="nQ9-Lc-p90"/>
+                                            <constraint firstItem="hvS-IM-Me6" firstAttribute="trailing" secondItem="yc2-Bq-fcI" secondAttribute="trailing" id="p2u-99-NIu"/>
                                             <constraint firstItem="Ji3-HD-09G" firstAttribute="top" secondItem="WIC-qX-IWT" secondAttribute="bottom" constant="20" id="p4W-b4-4ob"/>
+                                            <constraint firstItem="hvS-IM-Me6" firstAttribute="leading" secondItem="yc2-Bq-fcI" secondAttribute="leading" id="reb-5x-fQl"/>
                                             <constraint firstItem="ejI-my-zuR" firstAttribute="leading" secondItem="oI1-JY-72R" secondAttribute="leading" id="vRa-L3-bPw"/>
                                             <constraint firstItem="oI1-JY-72R" firstAttribute="top" secondItem="X1E-Ze-65N" secondAttribute="bottom" constant="25" id="vYY-le-wxv"/>
                                             <constraint firstItem="oI1-JY-72R" firstAttribute="leading" secondItem="ZNC-Ra-Jij" secondAttribute="leading" constant="25" id="xOs-4k-jpy"/>
@@ -242,6 +308,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="boat" destination="UM7-Mr-Io3" id="38e-fj-prc"/>
+                        <outlet property="boatBox" destination="oI1-JY-72R" id="MtM-ar-m9j"/>
                         <outlet property="containerView" destination="ZNC-Ra-Jij" id="dy2-PZ-zzJ"/>
                         <outlet property="deviceRotationSwitch" destination="R0Y-pJ-y0a" id="7dn-C6-bM5"/>
                         <outlet property="journalTextView" destination="Ji3-HD-09G" id="ZT3-7x-oFt"/>
@@ -251,8 +319,36 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="7vm-XT-xya">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="BYZ-38-t0r" id="nIT-M3-je0"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="2yb-M3-ARX"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="QgV-U8-hid">
+                    <connections>
+                        <action selector="handlePinchWithRecognizer:" destination="BYZ-38-t0r" id="awp-oy-WmI"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="0au-iy-QZO"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="vQ3-SN-YTQ">
+                    <connections>
+                        <action selector="handleRotateWithRecognizer:" destination="BYZ-38-t0r" id="dim-AE-ITm"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="ccu-wH-Z95"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <tapGestureRecognizer id="Aqk-nT-yIp">
+                    <connections>
+                        <action selector="handleTapWithRecognizer:" destination="BYZ-38-t0r" id="WWF-6W-kaQ"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="QWZ-I6-5rI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="helm.png" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="sailboat.png" width="384" height="384"/>
+    </resources>
 </document>
