@@ -125,7 +125,11 @@
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJn-Jz-gfT">
                                                                 <rect key="frame" x="0.0" y="184.5" width="182" height="31"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                 <state key="normal" title="Segue Test..."/>
+                                                                <connections>
+                                                                    <segue destination="n3w-LL-etw" kind="showDetail" identifier="segueTest" id="fRn-Cn-hke"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmL-Ca-nqi">
                                                                 <rect key="frame" x="0.0" y="220.5" width="182" height="20.5"/>
@@ -225,7 +229,7 @@
                                                     <constraint firstAttribute="height" constant="160" id="zsf-KM-ghQ"/>
                                                 </constraints>
                                             </view>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write a journal about your trip ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ji3-HD-09G" userLabel="Essay View">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write some long text about your trip here...  Don't forget to try the custom &quot;Zorro&quot; gesture by drawing a &quot;Z&quot; anywhere!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ji3-HD-09G" userLabel="Essay View">
                                                 <rect key="frame" x="25" y="761" width="364" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <gestureRecognizers/>
@@ -237,19 +241,19 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons by FreePik from www.flaticon.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6L-8t-8lK" userLabel="Icons Credit">
-                                                <rect key="frame" x="25" y="981" width="364" height="17"/>
+                                                <rect key="frame" x="25" y="996" width="364" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bell sound by Mike Koening" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc2-Bq-fcI" userLabel="Sound Credit">
-                                                <rect key="frame" x="25" y="1003" width="364" height="17"/>
+                                                <rect key="frame" x="25" y="1018" width="364" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harrison Kong © skyRoute66" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvS-IM-Me6" userLabel="App Credit">
-                                                <rect key="frame" x="25" y="1030" width="364" height="25.5"/>
+                                                <rect key="frame" x="25" y="1045" width="364" height="25.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -269,7 +273,7 @@
                                             <constraint firstItem="nFg-Ag-pm5" firstAttribute="leading" secondItem="ZNC-Ra-Jij" secondAttribute="leading" id="NHQ-Eb-n00"/>
                                             <constraint firstAttribute="trailing" secondItem="nFg-Ag-pm5" secondAttribute="trailing" id="S2W-WM-3N0"/>
                                             <constraint firstAttribute="trailing" secondItem="oI1-JY-72R" secondAttribute="trailing" constant="25" id="TEF-Of-Vf7"/>
-                                            <constraint firstItem="I6L-8t-8lK" firstAttribute="top" secondItem="Ji3-HD-09G" secondAttribute="bottom" constant="20" id="VVx-vc-1Gx"/>
+                                            <constraint firstItem="I6L-8t-8lK" firstAttribute="top" secondItem="Ji3-HD-09G" secondAttribute="bottom" constant="35" id="VVx-vc-1Gx"/>
                                             <constraint firstAttribute="trailing" secondItem="X1E-Ze-65N" secondAttribute="trailing" id="Ycy-vJ-m3r"/>
                                             <constraint firstItem="WIC-qX-IWT" firstAttribute="trailing" secondItem="ejI-my-zuR" secondAttribute="trailing" id="ZaL-P9-QUw"/>
                                             <constraint firstItem="nFg-Ag-pm5" firstAttribute="top" secondItem="ZNC-Ra-Jij" secondAttribute="top" constant="20" id="ZeJ-10-EvC"/>
@@ -345,6 +349,55 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
+        </scene>
+        <!--Segue Test View Controller-->
+        <scene sceneID="7MA-uv-YvX">
+            <objects>
+                <viewController id="n3w-LL-etw" customClass="SegueTestViewController" customModule="HKKBMDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bJ3-1D-4VA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HKUIKeyboardManger Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-61-qs9">
+                                <rect key="frame" x="45.5" y="406.5" width="323" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.14653693009999999" blue="0.37443329019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harrison Kong © skyRoute66" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFd-lD-WkK">
+                                <rect key="frame" x="45.5" y="465.5" width="323" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2M2-ah-rob">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.137733096" blue="0.48658112050000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedAnywhere:" destination="n3w-LL-etw" eventType="touchUpInside" id="10V-HV-rfC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2M2-ah-rob" firstAttribute="centerX" secondItem="bJ3-1D-4VA" secondAttribute="centerX" id="6bx-el-8Je"/>
+                            <constraint firstItem="2M2-ah-rob" firstAttribute="width" secondItem="bJ3-1D-4VA" secondAttribute="width" id="GDl-Wl-6g7"/>
+                            <constraint firstItem="KFd-lD-WkK" firstAttribute="top" secondItem="fPG-61-qs9" secondAttribute="bottom" constant="30" id="SlS-o7-DJf"/>
+                            <constraint firstItem="fPG-61-qs9" firstAttribute="centerY" secondItem="bJ3-1D-4VA" secondAttribute="centerY" id="U3J-nE-4sI"/>
+                            <constraint firstItem="2M2-ah-rob" firstAttribute="centerY" secondItem="bJ3-1D-4VA" secondAttribute="centerY" id="VcH-3e-phV"/>
+                            <constraint firstItem="fPG-61-qs9" firstAttribute="centerX" secondItem="bJ3-1D-4VA" secondAttribute="centerX" id="ZFQ-nV-hq3"/>
+                            <constraint firstItem="KFd-lD-WkK" firstAttribute="width" secondItem="fPG-61-qs9" secondAttribute="width" id="c5d-9o-Ife"/>
+                            <constraint firstItem="2M2-ah-rob" firstAttribute="height" secondItem="bJ3-1D-4VA" secondAttribute="height" id="cc7-1i-l4c"/>
+                            <constraint firstItem="KFd-lD-WkK" firstAttribute="centerX" secondItem="bJ3-1D-4VA" secondAttribute="centerX" id="ota-Nj-0kd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f1M-Pd-Krf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgs-id-Ylv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="112.5"/>
         </scene>
     </scenes>
     <resources>

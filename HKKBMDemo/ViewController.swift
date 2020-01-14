@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     private var heightConstraint : NSLayoutConstraint?
     var kbManager : HKUIKeyboardManagerScrollable?
     var bellPlayer:AVAudioPlayer? = nil
+    private let zRecognizer = ZGestureRecognizer()
     
     // MARK: - IB Outlets
     // MARK: -
@@ -132,20 +133,26 @@ class ViewController: UIViewController {
         scrollView.backgroundColor = .blue
 
         // load the bell sound
-        let url = Bundle.main.url(forResource: "ship-bell", withExtension: "mp3")
-        var player = AVAudioPlayer()
-        do {
-          try player = AVAudioPlayer(contentsOf: url!)
-          player.prepareToPlay()
-        } catch {
-          print("Error loading sound \(url!): \(error.localizedDescription)")
+        if let url = Bundle.main.url(forResource: "ship-bell", withExtension: "mp3") {
+            bellPlayer = AVAudioPlayer()
+            do {
+              try bellPlayer = AVAudioPlayer(contentsOf: url)
+              bellPlayer?.prepareToPlay()
+            } catch {
+              print("Failed to load audio resource \(url): \(error.localizedDescription)")
+            }
         }
-        bellPlayer = player
 
         kbManager = HKUIKeyboardManagerScrollable(ownerView: scrollView, outermostView: view)
         kbManager?.dismissDuringDeviceRotation = false
         kbManager?.registerEditableField(nameTextField)
         kbManager?.registerEditableField(journalTextView)
+        
+        // add custom Z gesture recognizer
+        
+        view.addGestureRecognizer(zRecognizer)
+        kbManager?.registerCustomGestureRecognizer(zRecognizer)
+
     }
 
     override func viewWillLayoutSubviews() {
@@ -168,5 +175,11 @@ class ViewController: UIViewController {
         kbManager?.viewWillTransition()
     }
     
+    // MARK: - Overridden Methods
+    // MARK: -
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          kbManager?.preparingSegue()
+    }
 }
 
