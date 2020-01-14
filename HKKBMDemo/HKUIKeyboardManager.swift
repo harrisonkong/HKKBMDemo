@@ -40,9 +40,13 @@
 //  -----------------------------------------------------------------
 
 /*
+    NOTE: If using Interface Builder, the keyboard dismiss mode of UIScrollView,
+          UICollectionView, UITableView and any descendent of UIScrollView will
+          be set to .none by this class, overriding the settings in interface
+          builder
  
     (Use HKUIKeyboardManager for non-scrollable views,
-     use HKUIKeyboardManager for scrollable views such as UIScrollView, UITableView, UICollectionView)
+     use HKUIKeyboardManager for scrollable views such as UIScrollView, UITableView, UIC  ollectionView)
  
     1. Initialize and register text fields
  
@@ -319,7 +323,26 @@ public class HKUIKeyboardManager : NSObject {
         HKDebug.deactivateCategory("IBActions")
         
     }
+    
+    // MARK: - Private Methods
+    // MARK: -
   
+    private func endEditingInAllTextFields() {
+        for textField in textFieldsAndViews {
+          textField.endEditing(true)
+        }
+    }
+  
+    func isUITextField(_ object: Any) -> Bool {
+        let test = object as? UITextField
+        return test != nil
+    }
+
+    func isUITextView(_ object: Any) -> Bool {
+        let test = object as? UITextView
+        return test != nil
+    }
+    
     // MARK: - Public Methods
     // MARK: -
   
@@ -436,24 +459,6 @@ public class HKUIKeyboardManager : NSObject {
       
     }
     
-    // MARK: - Private Methods
-    // MARK: -
-  
-    private func endEditingInAllTextFields() {
-        for textField in textFieldsAndViews {
-          textField.endEditing(true)
-        }
-    }
-  
-    func isUITextField(_ object: Any) -> Bool {
-        let test = object as? UITextField
-        return test != nil
-    }
-
-    func isUITextView(_ object: Any) -> Bool {
-        let test = object as? UITextView
-        return test != nil
-    }
 }
 
 // MARK: -

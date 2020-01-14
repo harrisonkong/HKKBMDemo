@@ -1,6 +1,6 @@
 //
 //  HKUIKeyboardManagerScrollable.swift
-//  HK Keyboard Manager
+//  HK Keyboard Manager for Scrollable
 //
 
 ///  MIT License
@@ -40,6 +40,10 @@
 //  -----------------------------------------------------------------
 
 /*
+    NOTE: If using Interface Builder, the keyboard dismiss mode of UIScrollView,
+          UICollectionView, UITableView and any descendent of UIScrollView will
+          be set to .none by this class, overriding the settings in interface
+          builder
  
     (Use HKUIKeyboardManager for non-scrollable views,
      use HKUIKeyboardManager for scrollable views such as UIScrollView, UITableView, UICollectionView)
@@ -295,82 +299,38 @@ public class HKUIKeyboardManagerScrollable : HKUIKeyboardManager {
           selector: #selector(handleTextDidEndEditing(_:)),
           name: UITextField.textDidEndEditingNotification,
           object: nil)
+        
+        // we will manage the keyboardDismissMode
+        
+        if let scrollView = ownerView as? UIScrollView {
+            scrollView.keyboardDismissMode = .none
+        }
       
-  }
-  
-    // MARK: - Public Methods
-    // MARK: -
-
-    @objc func handleTextDidBeginEditing(_ notification: Notification) {
-        HKDebug.deactivateCategory("handleTextDidBeginEditing()")
-        HKDebug.print("--- begins ---", category: "handleTextDidBeginEditing()")
-
-        guard let sender = notification.object as? UIView else {
-          HKDebug.print("--- quits ---", category: "handleTextDidBeginEditing()")
-            return
-        }
+    }
     
-        if textFieldsAndViews.contains(sender) {
-          
-            HKDebug.print("sender saved into instance variable activeEditableField for later...", category: "handleTextDidBeginEditing()")
-            activeEditableField = sender
-          
-            // UITextView receives TextEditingDidBeginNotification after
-            // keyboardWillShow. So we are going to do scrolling into view here
-            // if sender is a UITextView
-          
-            if isUITextView(sender) {
-              
-                HKDebug.print("sender is a UITextView, scrolling if necessary...", category: "handleTextDidBeginEditing()")
-              
-                if keepActiveFieldInView && cgKeyboardFrame != nil {
-                  scrollActiveFieldIntoViewIfNecessary()
-                } else {
-                  HKDebug.print("cgKeyboardFrame is nil -OR- keepActiveFieldInView set to false, scrolling skipped", category: "handleTextDidBeginEditing()")
-                }
-            }
-
-        } else {
-            HKDebug.print("sender \(sender) is not registered with this manager, ignoring this notification", category: "handleTextDidBeginEditing()")
-        }
- 
-        HKDebug.print("--- ends ---", category: "handleTextDidBeginEditing()")
-
-    }
- 
-    @objc func handleTextDidEndEditing(_ notification: Notification) {
-        HKDebug.deactivateCategory("handleTextDidEndEditing()")
-        HKDebug.print("--- begins ---", category: "handleTextDidEndEditing()")
-
-        activeEditableField = nil
-        HKDebug.print("activeEditableField set to nil", category: "handleTextDidEndEditing()")
-
-        HKDebug.print("--- ends ---", category: "handleTextDidEndEditing()")
-    }
-  
     // MARK: - Private Methods
     // MARK: -
   
-        private func adjustInsetsForKeyboardHide() {
-        
-            HKDebug.deactivateCategory("adjustInsetsForKeyboardHide()")
-          
-            guard
-              let scrollView = ownerView as? UIScrollView
-            else {
-                return
-            }
-        
-            HKDebug.print("----- begins -----", category: "adjustInsetsForKeyboardHide()")
-              
-            scrollView.contentInset.bottom = 0.0
-            scrollView.verticalScrollIndicatorInsets.bottom = 0.0
-            
-            HKDebug.print("scrollView.contentInset.bottom set to \(scrollView.contentInset.bottom)", category: "adjustInsetsForKeyboardHide()")
-            HKDebug.print("scrollView.verticalScrollIndicatorInsets.bottom set to \(scrollView.verticalScrollIndicatorInsets.bottom)", category: "adjustInsetsForKeyboardHide()")
-            
-            HKDebug.print("----- ends -----", category: "adjustInsetsForKeyboardHide()")
+    private func adjustInsetsForKeyboardHide() {
+    
+        HKDebug.deactivateCategory("adjustInsetsForKeyboardHide()")
+      
+        guard
+          let scrollView = ownerView as? UIScrollView
+        else {
+            return
         }
+    
+        HKDebug.print("----- begins -----", category: "adjustInsetsForKeyboardHide()")
+          
+        scrollView.contentInset.bottom = 0.0
+        scrollView.verticalScrollIndicatorInsets.bottom = 0.0
+        
+        HKDebug.print("scrollView.contentInset.bottom set to \(scrollView.contentInset.bottom)", category: "adjustInsetsForKeyboardHide()")
+        HKDebug.print("scrollView.verticalScrollIndicatorInsets.bottom set to \(scrollView.verticalScrollIndicatorInsets.bottom)", category: "adjustInsetsForKeyboardHide()")
+        
+        HKDebug.print("----- ends -----", category: "adjustInsetsForKeyboardHide()")
+    }
 
     private func adjustInsetsForKeyboardShow() {
     
@@ -516,6 +476,56 @@ public class HKUIKeyboardManagerScrollable : HKUIKeyboardManager {
             }
         }
         HKDebug.print("--- ends ---", category: "scrollActiveField...()")
+    }
+    
+    // MARK: - Public Methods
+    // MARK: -
+
+    @objc func handleTextDidBeginEditing(_ notification: Notification) {
+       HKDebug.deactivateCategory("handleTextDidBeginEditing()")
+       HKDebug.print("--- begins ---", category: "handleTextDidBeginEditing()")
+
+       guard let sender = notification.object as? UIView else {
+         HKDebug.print("--- quits ---", category: "handleTextDidBeginEditing()")
+           return
+       }
+
+       if textFieldsAndViews.contains(sender) {
+         
+           HKDebug.print("sender saved into instance variable activeEditableField for later...", category: "handleTextDidBeginEditing()")
+           activeEditableField = sender
+         
+           // UITextView receives TextEditingDidBeginNotification after
+           // keyboardWillShow. So we are going to do scrolling into view here
+           // if sender is a UITextView
+         
+           if isUITextView(sender) {
+             
+               HKDebug.print("sender is a UITextView, scrolling if necessary...", category: "handleTextDidBeginEditing()")
+             
+               if keepActiveFieldInView && cgKeyboardFrame != nil {
+                 scrollActiveFieldIntoViewIfNecessary()
+               } else {
+                 HKDebug.print("cgKeyboardFrame is nil -OR- keepActiveFieldInView set to false, scrolling skipped", category: "handleTextDidBeginEditing()")
+               }
+           }
+
+       } else {
+           HKDebug.print("sender \(sender) is not registered with this manager, ignoring this notification", category: "handleTextDidBeginEditing()")
+       }
+
+       HKDebug.print("--- ends ---", category: "handleTextDidBeginEditing()")
+
+    }
+
+    @objc func handleTextDidEndEditing(_ notification: Notification) {
+       HKDebug.deactivateCategory("handleTextDidEndEditing()")
+       HKDebug.print("--- begins ---", category: "handleTextDidEndEditing()")
+
+       activeEditableField = nil
+       HKDebug.print("activeEditableField set to nil", category: "handleTextDidEndEditing()")
+
+       HKDebug.print("--- ends ---", category: "handleTextDidEndEditing()")
     }
   
     // MARK: - Notification Handlers

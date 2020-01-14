@@ -21,6 +21,7 @@
 		C98EEA7D23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA7B23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift */; };
 		C98EEA7F23CAD0120027F2CB /* HKDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA7E23CAD0120027F2CB /* HKDebug.swift */; };
 		C9E4F1A223CDB45B00E7E1B1 /* skyRoute66.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9E4F1A123CDB45B00E7E1B1 /* skyRoute66.jpg */; };
+		C9E4F1A423CE5A6000E7E1B1 /* HKUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4F1A323CE5A5F00E7E1B1 /* HKUIButton.swift */; };
 		C9FF60D023CD4F20009C090C /* SegueTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF60CF23CD4F20009C090C /* SegueTestViewController.swift */; };
 		C9FF60D523CD52DA009C090C /* ZGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF60D423CD52DA009C090C /* ZGestureRecognizer.swift */; };
 		C9FF60D723CD594E009C090C /* z.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FF60D623CD594E009C090C /* z.png */; };
@@ -44,6 +45,7 @@
 		C98EEA7B23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKUIKeyboardManagerScrollable.swift; sourceTree = "<group>"; };
 		C98EEA7E23CAD0120027F2CB /* HKDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKDebug.swift; sourceTree = "<group>"; };
 		C9E4F1A123CDB45B00E7E1B1 /* skyRoute66.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = skyRoute66.jpg; sourceTree = "<group>"; };
+		C9E4F1A323CE5A5F00E7E1B1 /* HKUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKUIButton.swift; sourceTree = "<group>"; };
 		C9FF60CF23CD4F20009C090C /* SegueTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueTestViewController.swift; sourceTree = "<group>"; };
 		C9FF60D123CD52B4009C090C /* ZGestureRecognizerBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGestureRecognizerBridgingHeader.h; sourceTree = "<group>"; };
 		C9FF60D423CD52DA009C090C /* ZGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZGestureRecognizer.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				C9FF60D623CD594E009C090C /* z.png */,
 				C98EEA7823CAACD80027F2CB /* UIView+HKUtilities.swift */,
 				C98EEA7E23CAD0120027F2CB /* HKDebug.swift */,
+				C9E4F1A323CE5A5F00E7E1B1 /* HKUIButton.swift */,
 				C98EEA7A23CACFF40027F2CB /* HKUIKeyboardManager.swift */,
 				C98EEA7B23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift */,
 				C98EEA6323CA93D80027F2CB /* AppDelegate.swift */,
@@ -186,6 +189,7 @@
 				C98EEA7D23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift in Sources */,
 				C9FF60D523CD52DA009C090C /* ZGestureRecognizer.swift in Sources */,
 				C98EEA6823CA93D80027F2CB /* ViewController.swift in Sources */,
+				C9E4F1A423CE5A6000E7E1B1 /* HKUIButton.swift in Sources */,
 				C98EEA6423CA93D80027F2CB /* AppDelegate.swift in Sources */,
 				C98EEA7923CAACD80027F2CB /* UIView+HKUtilities.swift in Sources */,
 				C98EEA7C23CACFF40027F2CB /* HKUIKeyboardManager.swift in Sources */,
