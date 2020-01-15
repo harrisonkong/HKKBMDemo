@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C90D7E4F23CF6B4000D617E3 /* 1024 x 1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C90D7E4E23CF6B3F00D617E3 /* 1024 x 1024.jpg */; };
 		C956A08423CF586500147EBE /* HKUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C956A08323CF586500147EBE /* HKUIImageView.swift */; };
 		C961132323CD1DEB00E5986B /* sailboat.png in Resources */ = {isa = PBXBuildFile; fileRef = C961132223CD1DEB00E5986B /* sailboat.png */; };
 		C961132523CD3B1E00E5986B /* helm.png in Resources */ = {isa = PBXBuildFile; fileRef = C961132423CD3B1E00E5986B /* helm.png */; };
@@ -23,7 +24,6 @@
 		C98EEA7C23CACFF40027F2CB /* HKUIKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA7A23CACFF40027F2CB /* HKUIKeyboardManager.swift */; };
 		C98EEA7D23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA7B23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift */; };
 		C98EEA7F23CAD0120027F2CB /* HKDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA7E23CAD0120027F2CB /* HKDebug.swift */; };
-		C9E4F1A223CDB45B00E7E1B1 /* skyRoute66.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9E4F1A123CDB45B00E7E1B1 /* skyRoute66.jpg */; };
 		C9E4F1A423CE5A6000E7E1B1 /* HKUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4F1A323CE5A5F00E7E1B1 /* HKUIButton.swift */; };
 		C9E4F1A623CEF30300E7E1B1 /* UIView+HKAutoCornerRounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4F1A523CEF30300E7E1B1 /* UIView+HKAutoCornerRounding.swift */; };
 		C9FF60D023CD4F20009C090C /* SegueTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF60CF23CD4F20009C090C /* SegueTestViewController.swift */; };
@@ -33,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C90D7E4E23CF6B3F00D617E3 /* 1024 x 1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1024 x 1024.jpg"; sourceTree = "<group>"; };
 		C956A08323CF586500147EBE /* HKUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKUIImageView.swift; sourceTree = "<group>"; };
 		C961132223CD1DEB00E5986B /* sailboat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sailboat.png; sourceTree = "<group>"; };
 		C961132423CD3B1E00E5986B /* helm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helm.png; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		C98EEA7A23CACFF40027F2CB /* HKUIKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKUIKeyboardManager.swift; sourceTree = "<group>"; };
 		C98EEA7B23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKUIKeyboardManagerScrollable.swift; sourceTree = "<group>"; };
 		C98EEA7E23CAD0120027F2CB /* HKDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKDebug.swift; sourceTree = "<group>"; };
-		C9E4F1A123CDB45B00E7E1B1 /* skyRoute66.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = skyRoute66.jpg; sourceTree = "<group>"; };
 		C9E4F1A323CE5A5F00E7E1B1 /* HKUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKUIButton.swift; sourceTree = "<group>"; };
 		C9E4F1A523CEF30300E7E1B1 /* UIView+HKAutoCornerRounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+HKAutoCornerRounding.swift"; sourceTree = "<group>"; };
 		C9FF60CF23CD4F20009C090C /* SegueTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueTestViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		C98EEA6223CA93D80027F2CB /* HKKBMDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C9E4F1A123CDB45B00E7E1B1 /* skyRoute66.jpg */,
+				C90D7E4E23CF6B3F00D617E3 /* 1024 x 1024.jpg */,
 				C961132623CD41D000E5986B /* ship-bell.mp3 */,
 				C9FF60DA23CD6689009C090C /* scratch.mp3 */,
 				C961132423CD3B1E00E5986B /* helm.png */,
@@ -181,10 +181,10 @@
 				C98EEA7023CA93E00027F2CB /* LaunchScreen.storyboard in Resources */,
 				C9FF60DB23CD6689009C090C /* scratch.mp3 in Resources */,
 				C9FF60D723CD594E009C090C /* z.png in Resources */,
-				C9E4F1A223CDB45B00E7E1B1 /* skyRoute66.jpg in Resources */,
 				C961132723CD41D000E5986B /* ship-bell.mp3 in Resources */,
 				C961132523CD3B1E00E5986B /* helm.png in Resources */,
 				C98EEA6D23CA93E00027F2CB /* Assets.xcassets in Resources */,
+				C90D7E4F23CF6B4000D617E3 /* 1024 x 1024.jpg in Resources */,
 				C961132323CD1DEB00E5986B /* sailboat.png in Resources */,
 				C98EEA6B23CA93D80027F2CB /* Main.storyboard in Resources */,
 			);

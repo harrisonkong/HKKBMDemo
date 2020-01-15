@@ -530,7 +530,7 @@
                                     <action selector="tappedAnywhere:" destination="n3w-LL-etw" eventType="touchUpInside" id="10V-HV-rfC"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skyRoute66.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aZU-xF-TtG" customClass="HKUIImageView" customModule="HKKBMDemo" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1024 x 1024.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aZU-xF-TtG" customClass="HKUIImageView" customModule="HKKBMDemo" customModuleProvider="target">
                                 <rect key="frame" x="102" y="161" width="210.5" height="210.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aZU-xF-TtG" secondAttribute="height" multiplier="1:1" id="g4I-br-7P0"/>
@@ -576,8 +576,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1024 x 1024.jpg" width="1024" height="1024"/>
         <image name="helm.png" width="409.60000610351562" height="409.60000610351562"/>
         <image name="sailboat.png" width="384" height="384"/>
-        <image name="skyRoute66.jpg" width="1024" height="1024"/>
     </resources>
 </document>
