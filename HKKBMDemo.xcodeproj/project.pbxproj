@@ -10,6 +10,8 @@
 		C961132323CD1DEB00E5986B /* sailboat.png in Resources */ = {isa = PBXBuildFile; fileRef = C961132223CD1DEB00E5986B /* sailboat.png */; };
 		C961132523CD3B1E00E5986B /* helm.png in Resources */ = {isa = PBXBuildFile; fileRef = C961132423CD3B1E00E5986B /* helm.png */; };
 		C961132723CD41D000E5986B /* ship-bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C961132623CD41D000E5986B /* ship-bell.mp3 */; };
+		C98A97E023CF42D900DABB3E /* HKUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98A97DF23CF42D900DABB3E /* HKUIView.swift */; };
+		C98A97E723CF53EB00DABB3E /* UIView+HKAutoSizeCalculationBasis.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98A97E623CF53EB00DABB3E /* UIView+HKAutoSizeCalculationBasis.swift */; };
 		C98EEA6423CA93D80027F2CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA6323CA93D80027F2CB /* AppDelegate.swift */; };
 		C98EEA6623CA93D80027F2CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA6523CA93D80027F2CB /* SceneDelegate.swift */; };
 		C98EEA6823CA93D80027F2CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA6723CA93D80027F2CB /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 		C961132223CD1DEB00E5986B /* sailboat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sailboat.png; sourceTree = "<group>"; };
 		C961132423CD3B1E00E5986B /* helm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helm.png; sourceTree = "<group>"; };
 		C961132623CD41D000E5986B /* ship-bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ship-bell.mp3"; sourceTree = "<group>"; };
+		C98A97DF23CF42D900DABB3E /* HKUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKUIView.swift; sourceTree = "<group>"; };
+		C98A97E623CF53EB00DABB3E /* UIView+HKAutoSizeCalculationBasis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+HKAutoSizeCalculationBasis.swift"; sourceTree = "<group>"; };
 		C98EEA6023CA93D80027F2CB /* HKKBMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKKBMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98EEA6323CA93D80027F2CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C98EEA6523CA93D80027F2CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +99,9 @@
 				C9E4F1A323CE5A5F00E7E1B1 /* HKUIButton.swift */,
 				C98EEA7A23CACFF40027F2CB /* HKUIKeyboardManager.swift */,
 				C98EEA7B23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift */,
+				C98A97DF23CF42D900DABB3E /* HKUIView.swift */,
 				C9E4F1A523CEF30300E7E1B1 /* UIView+HKAutoCornerRounding.swift */,
+				C98A97E623CF53EB00DABB3E /* UIView+HKAutoSizeCalculationBasis.swift */,
 				C98EEA7823CAACD80027F2CB /* UIView+HKUtilities.swift */,
 				C98EEA6323CA93D80027F2CB /* AppDelegate.swift */,
 				C98EEA6523CA93D80027F2CB /* SceneDelegate.swift */,
@@ -189,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E4F1A623CEF30300E7E1B1 /* UIView+HKAutoCornerRounding.swift in Sources */,
+				C98A97E023CF42D900DABB3E /* HKUIView.swift in Sources */,
 				C9FF60D023CD4F20009C090C /* SegueTestViewController.swift in Sources */,
 				C98EEA7D23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift in Sources */,
 				C9FF60D523CD52DA009C090C /* ZGestureRecognizer.swift in Sources */,
@@ -197,6 +204,7 @@
 				C98EEA6423CA93D80027F2CB /* AppDelegate.swift in Sources */,
 				C98EEA7923CAACD80027F2CB /* UIView+HKUtilities.swift in Sources */,
 				C98EEA7C23CACFF40027F2CB /* HKUIKeyboardManager.swift in Sources */,
+				C98A97E723CF53EB00DABB3E /* UIView+HKAutoSizeCalculationBasis.swift in Sources */,
 				C98EEA6623CA93D80027F2CB /* SceneDelegate.swift in Sources */,
 				C98EEA7F23CAD0120027F2CB /* HKDebug.swift in Sources */,
 			);

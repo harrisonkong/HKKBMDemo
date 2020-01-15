@@ -34,7 +34,7 @@
 //  Dependencies
 //  -----------------------------------------------------------------
 //  UIView+HKAutoCornerRounding
-//  UIView+HKUtilities
+//  UIView+HKAutoSizeCalculationBasis
 
 //  Note:
 // ---------------------------------------------------------------
@@ -81,7 +81,7 @@ import UIKit
     // 4 = .longerEdge
     // 5 = .constant
     
-    var roundingBasis : AutoCornerRoundingBasis = .shorterEdge
+    var roundingBasis : AutoSizeCalculationBasis = .shorterEdge
     
     @IBInspectable var cornerRoundingBasis : Int {
         get {
@@ -92,7 +92,7 @@ import UIKit
             var newIndex = index
             if newIndex < 0 { newIndex = 1 }
             if newIndex > 5 { newIndex = 5 }
-            roundingBasis = AutoCornerRoundingBasis(rawValue: newIndex) ?? .shorterEdge
+            roundingBasis = AutoSizeCalculationBasis(rawValue: newIndex) ?? .shorterEdge
             updateCornerRadius()
         }
     }
@@ -256,7 +256,7 @@ import UIKit
     // MARK: - Overridden Methods
     // MARK: -
     
-    override func autoCornerRoundingBasis() -> AutoCornerRoundingBasis {
+    override func autoCornerRoundingBasis() -> AutoSizeCalculationBasis {
         return roundingBasis
     }
     
@@ -350,10 +350,6 @@ import UIKit
             layer.borderWidth = borderWidth
         }
     }
-    
-//    private func updateCornerRadius() {
-//        //layer.cornerRadius = cornerRadius
-//    }
     
     private func updateDisabledBkgAlpha() {
         disabledBkg = disabledBkg.withAlphaComponent(disabledBkgAlpha)

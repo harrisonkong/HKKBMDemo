@@ -1,6 +1,6 @@
 //
-//  UIView+HKAutoCornerRounding.swift
-//  HK UIView Auto Corner-Rounding
+//  UIView+HKAutoSizeCalculationBasis.swift
+//  HK UIView Auto Size Calculation Basis Enum
 //
 
 ///  MIT License
@@ -30,12 +30,9 @@
 //  Version History
 //  -----------------------------------------------------------------
 //  1.0.0     - 2020/01/01 - initial release
-//                           autoCornerRounding
 
 //  Dependencies
 //  -----------------------------------------------------------------
-//  UIView+HKAutoCornerRounding
-//  UIView+HKAutoSizeCalculationBasis
 //  UIView+HKUtilities
 
 import UIKit
@@ -44,54 +41,15 @@ extension UIView {
     
     // declaring this as an objective C raw Int enum makes it inspectable
     // in interface builder
-
-    // MARK: - Overridden Methods
+    
+    // MARK: - Properties
     // MARK: -
-    
-    override open func awakeFromNib() {
-        updateCornerRadius()
-    }
-    
-    // MARK: - Private Methods
-    // MARK: -
-    
-    @objc func autoCornerRoundingBasis() -> AutoSizeCalculationBasis {
-        return AutoSizeCalculationBasis.shorterEdge
-    }
-    
-    @objc func autoCornerRoundingConstant() -> CGFloat {
-        return 30.0
-    }
-    @objc func autoCornerRoundingEnabled() -> Bool {
-        return false
-    }
-    
-    @objc func autoCornerRoundingFactor() -> CGFloat {
-        return 12.0
-    }
-    
-    func updateCornerRadius() {
-               
-        if autoCornerRoundingEnabled() {
-            switch autoCornerRoundingBasis() {
-                
-            case .width:
-                layer.cornerRadius = frame.width / autoCornerRoundingFactor()
-            
-            case .height:
-                layer.cornerRadius = frame.height / autoCornerRoundingFactor()
-            
-            case .shorterEdge:
-                layer.cornerRadius = shorterEdgeLength() / autoCornerRoundingFactor()
-
-            case .longerEdge:
-                layer.cornerRadius = longerEdgeLength() / autoCornerRoundingFactor()
-            
-            case .constant:                print("by constant")
-                layer.cornerRadius = autoCornerRoundingConstant()
-            }
-        } else {
-            layer.cornerRadius = 0
-        }
+        
+    @objc public enum AutoSizeCalculationBasis: Int {
+        case width = 1
+        case height
+        case shorterEdge
+        case longerEdge
+        case constant
     }
 }
