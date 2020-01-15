@@ -94,12 +94,16 @@
           HKUIKeyboardManager?.viewWillTransition()
        }
 
-    4. If you would like the keyboard to be dismissed upon custom gestures,
-      register your own custom gesture recognizers
- 
-      ...
-      HKUIKeyboardManager?.registerCustomGestureRecognizer(tripleTapRecognizer)
-      ...
+       4. If you would like the keyboard to be dismissed upon custom gestures,
+         register your own custom gesture recognizers. You can add additional
+         action targets for these gesture recognizers but do not add them to
+         any views or assign delegates to them. The keyboard manager will handle
+         that.
+    
+         ...
+         tripleTapRecognizer.addTarget(self, action: #selector(handle3Taps(_:)))
+         HKUIKeyboardManager?.registerCustomGestureRecognizer(tripleTapRecognizer)
+         ...
  
     5. Change other user options as needed:
  
@@ -317,6 +321,11 @@ public class HKUIKeyboardManager : NSObject {
         rotationGestureRecognizer.delegate = self
         self.ownerView?.addGestureRecognizer(rotationGestureRecognizer)
       
+        panGestureRecognizer.require(toFail: pinchGestureRecognizer)
+        panGestureRecognizer.require(toFail: rotationGestureRecognizer)
+        tapGestureRecognizer.require(toFail: pinchGestureRecognizer)
+        tapGestureRecognizer.require(toFail: rotationGestureRecognizer)
+        
         HKDebug.enable()    // main switch for debug printing
         
         HKDebug.deactivateCategory("UserOptions")
@@ -392,6 +401,10 @@ public class HKUIKeyboardManager : NSObject {
       
         customRecognizer.addTarget(self, action: #selector(handleCustomGesture(_:)))
         customRecognizer.delegate = self
+        tapGestureRecognizer.require(toFail: customRecognizer)
+        panGestureRecognizer.require(toFail: customRecognizer)
+        pinchGestureRecognizer.require(toFail: customRecognizer)
+        rotationGestureRecognizer.require(toFail: customRecognizer)
         self.ownerView?.addGestureRecognizer(customRecognizer)
     }
   

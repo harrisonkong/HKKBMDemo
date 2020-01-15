@@ -155,7 +155,7 @@ class ViewController: UIViewController {
 
         bellPlayer = makeAudioPlayer(resourceName: "ship-bell")
         zPlayer = makeAudioPlayer(resourceName: "scratch")
-        
+                
         kbManager = HKUIKeyboardManagerScrollable(ownerView: scrollView, outermostView: view)
         kbManager?.dismissDuringDeviceRotation = false
         kbManager?.registerEditableField(nameTextField)
@@ -244,6 +244,9 @@ extension ViewController : UIGestureRecognizerDelegate {
     // MARK: UIGestureRecognizerDelegate Protocol
   
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        return true
+        
+        // only allow simultaneous rotate and pinch coming from the same view
+        return gestureRecognizer.view == otherGestureRecognizer.view
+        
     }
 }
