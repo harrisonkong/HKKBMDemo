@@ -38,40 +38,49 @@
 
 import UIKit
 
-protocol autoCornerRounding {
-    func autoCornerRoundingBasis() -> UIView.AutoCornerRoundingBasis
-    func autoCornerRoundingConstant() -> CGFloat
-    func autoCornerRoundingFactor() -> CGFloat
-    func autoCornerRoundingEnabled() -> Bool
-}
-
-extension UIView : autoCornerRounding {
+extension UIView {
     
-    enum AutoCornerRoundingBasis {
-        case width
+    // declaring this as an objective C raw Int enum makes it inspectable
+    // in interface builder
+    
+    // MARK: - Properties
+    // MARK: -
+        
+    @objc public enum AutoCornerRoundingBasis: Int {
+        case width = 1
         case height
         case shorterEdge
         case longerEdge
         case constant
     }
+
+    // MARK: - Overridden Methods
+    // MARK: -
     
-    func autoCornerRoundingBasis() -> UIView.AutoCornerRoundingBasis {
+    override open func awakeFromNib() {
+        updateCornerRadius()
+    }
+    
+    // MARK: - Private Methods
+    // MARK: -
+    
+    @objc func autoCornerRoundingBasis() -> AutoCornerRoundingBasis {
         return AutoCornerRoundingBasis.shorterEdge
     }
     
-    func autoCornerRoundingConstant() -> CGFloat {
+    @objc func autoCornerRoundingConstant() -> CGFloat {
         return 30.0
     }
-    func autoCornerRoundingEnabled() -> Bool {
+    @objc func autoCornerRoundingEnabled() -> Bool {
         return false
     }
     
-    func autoCornerRoundingFactor() -> CGFloat {
+    @objc func autoCornerRoundingFactor() -> CGFloat {
         return 12.0
     }
     
-    override open func awakeFromNib() {
-        
+    func updateCornerRadius() {
+               
         if autoCornerRoundingEnabled() {
             switch autoCornerRoundingBasis() {
                 
@@ -87,9 +96,11 @@ extension UIView : autoCornerRounding {
             case .longerEdge:
                 layer.cornerRadius = longerEdgeLength() / autoCornerRoundingFactor()
             
-            case .constant:
+            case .constant:                print("by constant")
                 layer.cornerRadius = autoCornerRoundingConstant()
             }
+        } else {
+            layer.cornerRadius = 0
         }
     }
 }

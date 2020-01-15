@@ -31,6 +31,11 @@
 //  -----------------------------------------------------------------
 //  1.0.0     - 2020/01/01 - initial release
 
+//  Dependencies
+//  -----------------------------------------------------------------
+//  UIView+HKAutoCornerRounding
+//  UIView+HKUtilities
+
 //  Note:
 // ---------------------------------------------------------------
 //  There is a bug in XCode, you must go to the IB Inspector panel
@@ -43,7 +48,7 @@ import UIKit
 
 @IBDesignable class HKUIButton : UIButton {
     
-    // MARK: - Overridden Properties
+    // MARK: - Properties
     // MARK: -
     
     override var isEnabled : Bool {
@@ -61,10 +66,46 @@ import UIKit
     // MARK: - IB Inspectable Properties
     // MARK: -
     
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    @IBInspectable var autoCornerRounding : Bool = false {
         didSet {
             updateCornerRadius()
-            updateNormalBkgColor()
+        }
+    }
+    
+    // unfortunately IB inspectable does not support enum, we have to use
+    // an integer:
+    //
+    // 1 = .width
+    // 2 = .height
+    // 3 = .shorterEdge
+    // 4 = .longerEdge
+    // 5 = .constant
+    
+    var roundingBasis : AutoCornerRoundingBasis = .shorterEdge
+    
+    @IBInspectable var cornerRoundingBasis : Int {
+        get {
+            return roundingBasis.rawValue
+        }
+        set(index) {
+            
+            var newIndex = index
+            if newIndex < 0 { newIndex = 1 }
+            if newIndex > 5 { newIndex = 5 }
+            roundingBasis = AutoCornerRoundingBasis(rawValue: newIndex) ?? .shorterEdge
+            updateCornerRadius()
+        }
+    }
+    
+    @IBInspectable var cornerRadiusConstant : CGFloat = 30.0 {
+        didSet {
+            updateCornerRadius()
+        }
+    }
+    
+    @IBInspectable var cornerRadiusFactor : CGFloat = 12.0 {
+        didSet {
+            updateCornerRadius()
         }
     }
 
@@ -215,6 +256,22 @@ import UIKit
     // MARK: - Overridden Methods
     // MARK: -
     
+    override func autoCornerRoundingBasis() -> AutoCornerRoundingBasis {
+        return roundingBasis
+    }
+    
+    override func autoCornerRoundingConstant() -> CGFloat {
+        return cornerRadiusConstant
+    }
+    
+    override func autoCornerRoundingEnabled() -> Bool {
+        return autoCornerRounding
+    }
+    
+    override func autoCornerRoundingFactor() -> CGFloat {
+        return cornerRadiusFactor
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -224,12 +281,17 @@ import UIKit
         super.init(frame: frame)
         commonInit()
     }
+  
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        updateCornerRadius()
+    }
     
     override func prepareForInterfaceBuilder() {
         commonInit()
     }
     
-    // MARK: - Instance Methods
+    // MARK: - Private Methods
     // MARK: -
     
     private func commonInit() {
@@ -289,9 +351,9 @@ import UIKit
         }
     }
     
-    private func updateCornerRadius() {
-        layer.cornerRadius = cornerRadius
-    }
+//    private func updateCornerRadius() {
+//        //layer.cornerRadius = cornerRadius
+//    }
     
     private func updateDisabledBkgAlpha() {
         disabledBkg = disabledBkg.withAlphaComponent(disabledBkgAlpha)

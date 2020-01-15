@@ -227,6 +227,16 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="disabledTextAlpha">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoCornerRounding" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusConstant">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRoundingBasis">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusFactor">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <segue destination="n3w-LL-etw" kind="showDetail" identifier="segueTest" id="fRn-Cn-hke"/>
