@@ -50,7 +50,7 @@ import UIKit
     
     // MARK: - Properties
     // MARK: -
-    
+        
     override var isEnabled : Bool {
         didSet {
             renderBorder()
@@ -106,6 +106,43 @@ import UIKit
     @IBInspectable var cornerRadiusFactor : CGFloat = 12.0 {
         didSet {
             updateCornerRadius()
+        }
+    }
+    
+    @IBInspectable var autoSizeTitleFont : Bool = false {
+        didSet {
+            updateTitleFontSize()
+        }
+    }
+    
+    // unfortunately IB inspectable does not support enum, we have to use
+    // an integer:
+    //
+    // 1 = .width
+    // 2 = .height
+    // 3 = .shorterEdge
+    // 4 = .longerEdge
+    // 5 = .constant   (not used here, since we can just use the IB font size)
+    
+    var titleFontBasis : AutoSizeCalculationBasis = .height
+    
+    @IBInspectable var AutoSizeTtitleFontBasis : Int {
+        get {
+            return titleFontBasis.rawValue
+        }
+        set(index) {
+            
+            var newIndex = index
+            if newIndex < 0 { newIndex = 1 }
+            if newIndex > 4 { newIndex = 4 }
+            titleFontBasis = AutoSizeCalculationBasis(rawValue: newIndex) ?? .shorterEdge
+            updateTitleFontSize()
+        }
+    }
+    
+    @IBInspectable var autoSizeTitleFontFactor : CGFloat = 0.5 {
+        didSet {
+            updateTitleFontSize()
         }
     }
 
@@ -285,6 +322,7 @@ import UIKit
     override func layoutSubviews() {
         super.layoutSubviews()
         updateCornerRadius()
+        updateTitleFontSize()
     }
     
     override func prepareForInterfaceBuilder() {
@@ -310,6 +348,7 @@ import UIKit
         updateHLTextAlpha()
         updateNormalBkgAlpha()
         updateNormalTextAlpha()
+        updateTitleFontSize()
         renderBorder()
     }
 
@@ -441,5 +480,28 @@ import UIKit
     
     private func updateNormalTextColor() {
         setTitleColor(normalText, for: UIControl.State.normal)
+    }
+    
+    private func updateTitleFontSize() {
+        
+        if autoSizeTitleFont {
+            switch titleFontBasis {
+                
+            case .width:
+                titleLabel?.font = titleLabel?.font.withSize(frame.width / autoSizeTitleFontFactor)
+            
+            case .height:
+                titleLabel?.font = titleLabel?.font.withSize(frame.height / autoSizeTitleFontFactor)
+
+            case .shorterEdge:
+                titleLabel?.font = titleLabel?.font.withSize(shorterEdgeLength() / autoSizeTitleFontFactor)
+
+            case .longerEdge:
+                titleLabel?.font = titleLabel?.font.withSize(longerEdgeLength() / autoSizeTitleFontFactor)
+
+            case .constant:
+                layer.cornerRadius = autoCornerRoundingConstant()
+            }
+        }
     }
 }

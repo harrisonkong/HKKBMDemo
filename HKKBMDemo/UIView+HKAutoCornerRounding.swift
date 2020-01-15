@@ -87,7 +87,7 @@ extension UIView {
             case .longerEdge:
                 layer.cornerRadius = longerEdgeLength() / autoCornerRoundingFactor()
             
-            case .constant:                print("by constant")
+            case .constant:
                 layer.cornerRadius = autoCornerRoundingConstant()
             }
         } else {

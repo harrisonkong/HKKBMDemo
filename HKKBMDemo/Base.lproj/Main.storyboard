@@ -154,10 +154,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJn-Jz-gfT" customClass="HKUIButton" customModule="HKKBMDemo" customModuleProvider="target">
-                                                <rect key="frame" x="103.5" y="384" width="207" height="41.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="fJn-Jz-gfT" secondAttribute="height" multiplier="5:1" id="xbb-BN-J1Z"/>
-                                                </constraints>
+                                                <rect key="frame" x="103.5" y="384" width="207" height="46.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <state key="normal" title="Segue Test..."/>
                                                 <userDefinedRuntimeAttributes>
@@ -237,25 +234,32 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusFactor">
                                                         <real key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoSizeTitleFont" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="autoSizeTitleFontFactor">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="AutoSizeTtitleFontBasis">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <segue destination="n3w-LL-etw" kind="showDetail" identifier="segueTest" id="fRn-Cn-hke"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Custom Z gestures = drawing &quot;Z&quot;s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxN-dJ-Vzp">
-                                                <rect key="frame" x="0.0" y="450.5" width="414" height="24"/>
+                                                <rect key="frame" x="0.0" y="455.5" width="414" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="anywhere outside the 2 text fields" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz4-VU-5jJ">
-                                                <rect key="frame" x="0.0" y="475.5" width="414" height="24"/>
+                                                <rect key="frame" x="0.0" y="480.5" width="414" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oI1-JY-72R" userLabel="Boat Box" customClass="HKUIView" customModule="HKKBMDemo" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="524.5" width="364" height="150"/>
+                                                <rect key="frame" x="25" y="529.5" width="364" height="150"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag the boat around!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ac-Gi-PYH">
                                                         <rect key="frame" x="0.0" y="5" width="364" height="24"/>
@@ -307,7 +311,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="What should we name the boat?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejI-my-zuR" userLabel="Name Field">
-                                                <rect key="frame" x="25" y="694.5" width="364" height="40"/>
+                                                <rect key="frame" x="25" y="699.5" width="364" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="EFz-ye-XZX"/>
@@ -316,7 +320,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIC-qX-IWT" userLabel="Helm Box" customClass="HKUIView" customModule="HKKBMDemo" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="769.5" width="364" height="250"/>
+                                                <rect key="frame" x="25" y="774.5" width="364" height="250"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rotate + pinch! Tap = Bells" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33b-xb-LK8">
                                                         <rect key="frame" x="0.0" y="5" width="364" height="24"/>
@@ -368,7 +372,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write some long text about your trip here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ji3-HD-09G" userLabel="Essay View">
-                                                <rect key="frame" x="25" y="1039.5" width="364" height="200"/>
+                                                <rect key="frame" x="25" y="1044.5" width="364" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -379,19 +383,19 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons by FreePik from www.flaticon.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6L-8t-8lK" userLabel="Icons Credit">
-                                                <rect key="frame" x="25" y="1274.5" width="364" height="17"/>
+                                                <rect key="frame" x="25" y="1279.5" width="364" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bell sound by Mike Koening" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc2-Bq-fcI" userLabel="Sound Credit">
-                                                <rect key="frame" x="25" y="1296.5" width="364" height="17"/>
+                                                <rect key="frame" x="25" y="1301.5" width="364" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harrison Kong © skyRoute66" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvS-IM-Me6" userLabel="App Credit">
-                                                <rect key="frame" x="25" y="1323.5" width="364" height="25.5"/>
+                                                <rect key="frame" x="25" y="1328.5" width="364" height="25.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -419,6 +423,7 @@
                                             <constraint firstItem="fJn-Jz-gfT" firstAttribute="centerX" secondItem="ZNC-Ra-Jij" secondAttribute="centerX" id="Pfh-EU-gdp"/>
                                             <constraint firstAttribute="trailing" secondItem="nFg-Ag-pm5" secondAttribute="trailing" id="S2W-WM-3N0"/>
                                             <constraint firstAttribute="trailing" secondItem="oI1-JY-72R" secondAttribute="trailing" constant="25" id="TEF-Of-Vf7"/>
+                                            <constraint firstItem="fJn-Jz-gfT" firstAttribute="height" secondItem="DsZ-IC-ani" secondAttribute="height" multiplier="1.5" id="Umb-aW-EBa"/>
                                             <constraint firstItem="I6L-8t-8lK" firstAttribute="top" secondItem="Ji3-HD-09G" secondAttribute="bottom" constant="35" id="VVx-vc-1Gx"/>
                                             <constraint firstItem="oI1-JY-72R" firstAttribute="top" secondItem="dz4-VU-5jJ" secondAttribute="bottom" constant="25" id="WCK-S5-Tt3"/>
                                             <constraint firstAttribute="trailing" secondItem="X1E-Ze-65N" secondAttribute="trailing" id="Ycy-vJ-m3r"/>
