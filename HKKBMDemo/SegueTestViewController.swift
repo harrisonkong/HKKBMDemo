@@ -25,8 +25,8 @@ class SegueTestViewController: UIViewController {
     // MARK: - Lifecycle
     // MARK: -
         
-    override func viewDidLayoutSubviews() {
-        logoImage.layer.cornerRadius = logoImage.frame.size.height / 4.0
-    }
+//    override func viewDidLayoutSubviews() {
+//        logoImage.layer.cornerRadius = logoImage.frame.size.height / 4.0
+//    }
     
 }

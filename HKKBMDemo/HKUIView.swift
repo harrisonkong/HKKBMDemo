@@ -33,16 +33,8 @@
 
  //  Dependencies
  //  -----------------------------------------------------------------
+ //  HKAutoSizeCalculationBasis
  //  UIView+HKAutoCornerRounding
- //  UIView+HKAutoSizeCalculationBasis
-
- //  Note:
- // ---------------------------------------------------------------
- //  There is a bug in XCode, you must go to the IB Inspector panel
- //  and type something into the "image" field, then delete it for
- //  the highlight behaviors to work properly
- //
- //  Set button type to "custom" in Interface Builder
 
  import UIKit
 

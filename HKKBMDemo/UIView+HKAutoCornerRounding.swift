@@ -34,8 +34,8 @@
 
 //  Dependencies
 //  -----------------------------------------------------------------
+//  HKAutoSizeCalculationBasis
 //  UIView+HKAutoCornerRounding
-//  UIView+HKAutoSizeCalculationBasis
 //  UIView+HKUtilities
 
 import UIKit

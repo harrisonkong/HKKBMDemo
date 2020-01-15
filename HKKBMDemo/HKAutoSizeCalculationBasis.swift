@@ -1,5 +1,5 @@
 //
-//  UIView+HKAutoSizeCalculationBasis.swift
+//  HKAutoSizeCalculationBasis.swift
 //  HK UIView Auto Size Calculation Basis Enum
 //
 
@@ -31,25 +31,18 @@
 //  -----------------------------------------------------------------
 //  1.0.0     - 2020/01/01 - initial release
 
-//  Dependencies
-//  -----------------------------------------------------------------
-//  UIView+HKUtilities
+// declaring this as an objective C raw Int enum makes it inspectable
+// in interface builder
 
-import UIKit
+import Foundation
 
-extension UIView {
+// MARK: - Properties
+// MARK: -
     
-    // declaring this as an objective C raw Int enum makes it inspectable
-    // in interface builder
-    
-    // MARK: - Properties
-    // MARK: -
-        
-    @objc public enum AutoSizeCalculationBasis: Int {
-        case width = 1
-        case height
-        case shorterEdge
-        case longerEdge
-        case constant
-    }
+@objc public enum AutoSizeCalculationBasis: Int {
+    case width = 1
+    case height
+    case shorterEdge
+    case longerEdge
+    case constant
 }
