@@ -29,12 +29,12 @@
 //
 //  Version History
 //  -----------------------------------------------------------------
-//  1.0.0     - 2020/01/01 - initial release
+//  1.0.0     - 2020/01/19 - initial release
 
 //  Dependencies
 //  -----------------------------------------------------------------
 //  HKDebug                 >= 1.0.0
-//  HKUIKeyboardManager
+//  HKUIKeyboardManager     >= 1.0.0
 //  HKUIViewUtilities       >= 1.0.0
 
 //  How To Use
@@ -247,7 +247,7 @@ public class HKUIKeyboardManagerScrollable : HKUIKeyboardManager {
     // MARK: - Initializers
     // MARK: -
   
-    override init(ownerView: UIView, outermostView: UIView) {
+    override public init(ownerView: UIView, outermostView: UIView) {
       
         super.init(ownerView: ownerView, outermostView: outermostView)
       

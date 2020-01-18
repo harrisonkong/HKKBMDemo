@@ -1,24 +1,29 @@
 PODS:
   - HKDebug (1.0.0)
   - HKLengthCalculationBasis (1.0.0)
+  - HKUIKeyboardManager (1.0.0):
+    - HKDebug (~> 1.0.0)
+    - HKUIViewUtilities (~> 1.0.0)
   - HKUIViewUtilities (1.0.0)
 
 DEPENDENCIES:
-  - HKDebug (~> 1.0.0)
   - HKLengthCalculationBasis (~> 1.0.0)
+  - HKUIKeyboardManager (~> 1.0.0)
   - HKUIViewUtilities (~> 1.0.0)
 
 SPEC REPOS:
   trunk:
     - HKDebug
     - HKLengthCalculationBasis
+    - HKUIKeyboardManager
     - HKUIViewUtilities
 
 SPEC CHECKSUMS:
   HKDebug: 63d88a0d695f3942b882454bd63fba0a5c885ce9
   HKLengthCalculationBasis: 53c24b3d86f9ff30edd7b57a644329dccdd22799
+  HKUIKeyboardManager: 10f57c1d313439f316caa221899193e3aa97fe64
   HKUIViewUtilities: fde58cfef72c916510ed32d6622d587ed79992d3
 
-PODFILE CHECKSUM: a57aa67c71e83b16f2507a0f3bec2ba5a1ab528a
+PODFILE CHECKSUM: 8096599cb32a910d0a7717a817bba65279e03fcd
 
 COCOAPODS: 1.8.4

@@ -29,7 +29,7 @@
 //
 //  Version History
 //  -----------------------------------------------------------------
-//  1.0.0     - 2020/01/01 - initial release
+//  1.0.0     - 2020/01/19 - initial release
 
 //  Dependencies
 //  -----------------------------------------------------------------
@@ -289,7 +289,7 @@ public class HKUIKeyboardManager : NSObject {
     // MARK: - Initializers
     // MARK: -
   
-    init(ownerView: UIView, outermostView: UIView) {
+    public init(ownerView: UIView, outermostView: UIView) {
 
         super.init()
       

@@ -1,0 +1,6 @@
+module HKUIKeyboardManager {
+  umbrella header "HKUIKeyboardManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
