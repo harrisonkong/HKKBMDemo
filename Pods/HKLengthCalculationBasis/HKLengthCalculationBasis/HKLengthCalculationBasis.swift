@@ -1,7 +1,6 @@
 //
-//  HKSizeCalculationBasis.swift
-//  HK Size Calculation Basis Enumeration
-//
+//  HKLengthCalculationBasis.swift
+//  HK Length Calculation Basis Enumeration
 
 ///  MIT License
 ///
@@ -29,17 +28,17 @@
 //
 //  Version History
 //  -----------------------------------------------------------------
-//  1.0.0     - 2020/01/01 - initial release
+//  1.0.0     - 2020/01/19 initial release
 
-// declaring this as an objective C raw Int enum makes it inspectable
-// in interface builder
+// This is defined as an objective C raw Int enum makes it
+// adaptable as an @IBInspectable in XCode interface builder
 
 import Foundation
 
 // MARK: - Properties
 // MARK: -
     
-@objc public enum HKSizeCalculationBasis: Int {
+@objc public enum HKLengthCalculationBasis: Int {
     case width = 1
     case height
     case shorterEdge

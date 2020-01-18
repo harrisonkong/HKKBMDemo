@@ -33,7 +33,7 @@
 
 //  Dependencies
 //  -----------------------------------------------------------------
-//  HKAutoSizeCalculationBasis
+//  HKLengthSizeCalculationBasis    >= 1.0.0
 //  UIView+HKAutoCornerRounding
 
 //  Note:
@@ -45,6 +45,7 @@
 //  Set button type to "custom" in Interface Builder
 
 import UIKit
+import HKLengthCalculationBasis
 
 @IBDesignable class HKUIButton : UIButton {
     
@@ -81,7 +82,7 @@ import UIKit
     // 4 = .longerEdge
     // 5 = .constant
     
-    var roundingBasis : HKSizeCalculationBasis = .shorterEdge
+    var roundingBasis : HKLengthCalculationBasis = .shorterEdge
     
     @IBInspectable var cornerRoundingBasis : Int {
         get {
@@ -92,7 +93,7 @@ import UIKit
             var newIndex = index
             if newIndex < 0 { newIndex = 1 }
             if newIndex > 5 { newIndex = 5 }
-            roundingBasis = HKSizeCalculationBasis(rawValue: newIndex) ?? .shorterEdge
+            roundingBasis = HKLengthCalculationBasis(rawValue: newIndex) ?? .shorterEdge
             updateCornerRadius()
         }
     }
@@ -124,7 +125,7 @@ import UIKit
     // 4 = .longerEdge
     // 5 = .constant   (not used here, since we can just use the IB font size)
     
-    var titleFontBasis : HKSizeCalculationBasis = .height
+    var titleFontBasis : HKLengthCalculationBasis = .height
     
     @IBInspectable var AutoSizeTtitleFontBasis : Int {
         get {
@@ -135,7 +136,7 @@ import UIKit
             var newIndex = index
             if newIndex < 0 { newIndex = 1 }
             if newIndex > 4 { newIndex = 4 }
-            titleFontBasis = HKSizeCalculationBasis(rawValue: newIndex) ?? .shorterEdge
+            titleFontBasis = HKLengthCalculationBasis(rawValue: newIndex) ?? .shorterEdge
             updateTitleFontSize()
         }
     }
@@ -293,7 +294,7 @@ import UIKit
     // MARK: - Overridden Methods
     // MARK: -
     
-    override func autoCornerRoundingBasis() -> HKSizeCalculationBasis {
+    override func autoCornerRoundingBasis() -> HKLengthCalculationBasis {
         return roundingBasis
     }
     

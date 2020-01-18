@@ -33,10 +33,11 @@
 
 //  Dependencies
 //  -----------------------------------------------------------------
-//  HKAutoSizeCalculationBasis
+//  HKLengthCalculationBasis        >= 1.0.0
 //  UIView+HKAutoCornerRounding
 
 import UIKit
+import HKLengthCalculationBasis
 
 @IBDesignable class HKUIImageView : UIImageView {
     
@@ -67,7 +68,7 @@ import UIKit
     // 4 = .longerEdge
     // 5 = .constant
     
-    var roundingBasis : HKSizeCalculationBasis = .shorterEdge
+    var roundingBasis : HKLengthCalculationBasis = .shorterEdge
     
     @IBInspectable var cornerRoundingBasis : Int {
         get {
@@ -78,7 +79,7 @@ import UIKit
             var newIndex = index
             if newIndex < 0 { newIndex = 1 }
             if newIndex > 5 { newIndex = 5 }
-            roundingBasis = HKSizeCalculationBasis(rawValue: newIndex) ?? .shorterEdge
+            roundingBasis = HKLengthCalculationBasis(rawValue: newIndex) ?? .shorterEdge
             updateCornerRadius()
         }
     }
@@ -152,7 +153,7 @@ import UIKit
     // MARK: - Overridden Methods
     // MARK: -
     
-    override func autoCornerRoundingBasis() -> HKSizeCalculationBasis {
+    override func autoCornerRoundingBasis() -> HKLengthCalculationBasis {
         return roundingBasis
     }
     

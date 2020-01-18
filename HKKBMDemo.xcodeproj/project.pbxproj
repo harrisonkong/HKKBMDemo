@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5036430A41A6923BE692F1A /* libPods-HKKBMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE58D5888F82A2742B385A9 /* libPods-HKKBMDemo.a */; };
+		96E93E411E63FB16DC8C12BD /* libPods-HKKBMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42011E2CCB2D431FEB5DAC14 /* libPods-HKKBMDemo.a */; };
 		C90D7E4F23CF6B4000D617E3 /* 1024 x 1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C90D7E4E23CF6B3F00D617E3 /* 1024 x 1024.jpg */; };
 		C956A08423CF586500147EBE /* HKUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C956A08323CF586500147EBE /* HKUIImageView.swift */; };
 		C961132323CD1DEB00E5986B /* sailboat.png in Resources */ = {isa = PBXBuildFile; fileRef = C961132223CD1DEB00E5986B /* sailboat.png */; };
 		C961132523CD3B1E00E5986B /* helm.png in Resources */ = {isa = PBXBuildFile; fileRef = C961132423CD3B1E00E5986B /* helm.png */; };
 		C961132723CD41D000E5986B /* ship-bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C961132623CD41D000E5986B /* ship-bell.mp3 */; };
 		C98A97E023CF42D900DABB3E /* HKUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98A97DF23CF42D900DABB3E /* HKUIView.swift */; };
-		C98A97E723CF53EB00DABB3E /* HKSizeCalculationBasis.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98A97E623CF53EB00DABB3E /* HKSizeCalculationBasis.swift */; };
 		C98EEA6423CA93D80027F2CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA6323CA93D80027F2CB /* AppDelegate.swift */; };
 		C98EEA6623CA93D80027F2CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA6523CA93D80027F2CB /* SceneDelegate.swift */; };
 		C98EEA6823CA93D80027F2CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA6723CA93D80027F2CB /* ViewController.swift */; };
@@ -33,15 +32,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07B01514E4DE888F6038A6B0 /* Pods-HKKBMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKKBMDemo.release.xcconfig"; path = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.release.xcconfig"; sourceTree = "<group>"; };
-		7F3197594148A718AA0C1027 /* Pods-HKKBMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKKBMDemo.debug.xcconfig"; path = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		0A10C7F08748DB4913907945 /* Pods-HKKBMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKKBMDemo.release.xcconfig"; path = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.release.xcconfig"; sourceTree = "<group>"; };
+		0F3056CB45462916A1D97B02 /* Pods-HKKBMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKKBMDemo.debug.xcconfig"; path = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		42011E2CCB2D431FEB5DAC14 /* libPods-HKKBMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HKKBMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90D7E4E23CF6B3F00D617E3 /* 1024 x 1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1024 x 1024.jpg"; sourceTree = "<group>"; };
 		C956A08323CF586500147EBE /* HKUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKUIImageView.swift; sourceTree = "<group>"; };
 		C961132223CD1DEB00E5986B /* sailboat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sailboat.png; sourceTree = "<group>"; };
 		C961132423CD3B1E00E5986B /* helm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helm.png; sourceTree = "<group>"; };
 		C961132623CD41D000E5986B /* ship-bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ship-bell.mp3"; sourceTree = "<group>"; };
 		C98A97DF23CF42D900DABB3E /* HKUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKUIView.swift; sourceTree = "<group>"; };
-		C98A97E623CF53EB00DABB3E /* HKSizeCalculationBasis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSizeCalculationBasis.swift; sourceTree = "<group>"; };
 		C98EEA6023CA93D80027F2CB /* HKKBMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKKBMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98EEA6323CA93D80027F2CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C98EEA6523CA93D80027F2CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +59,6 @@
 		C9FF60D423CD52DA009C090C /* ZGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZGestureRecognizer.swift; sourceTree = "<group>"; };
 		C9FF60D623CD594E009C090C /* z.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = z.png; sourceTree = "<group>"; };
 		C9FF60DA23CD6689009C090C /* scratch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scratch.mp3; sourceTree = "<group>"; };
-		EDE58D5888F82A2742B385A9 /* libPods-HKKBMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HKKBMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5036430A41A6923BE692F1A /* libPods-HKKBMDemo.a in Frameworks */,
+				96E93E411E63FB16DC8C12BD /* libPods-HKKBMDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,10 +76,18 @@
 		55BE281010C2D44850F0A980 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7F3197594148A718AA0C1027 /* Pods-HKKBMDemo.debug.xcconfig */,
-				07B01514E4DE888F6038A6B0 /* Pods-HKKBMDemo.release.xcconfig */,
+				0F3056CB45462916A1D97B02 /* Pods-HKKBMDemo.debug.xcconfig */,
+				0A10C7F08748DB4913907945 /* Pods-HKKBMDemo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		642F52BAFA0DA10DE45F53FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42011E2CCB2D431FEB5DAC14 /* libPods-HKKBMDemo.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C98EEA5723CA93D70027F2CB = {
@@ -90,7 +96,7 @@
 				C98EEA6223CA93D80027F2CB /* HKKBMDemo */,
 				C98EEA6123CA93D80027F2CB /* Products */,
 				55BE281010C2D44850F0A980 /* Pods */,
-				CCD9CDC6EE1C601E01F78913 /* Frameworks */,
+				642F52BAFA0DA10DE45F53FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,7 +118,6 @@
 				C961132223CD1DEB00E5986B /* sailboat.png */,
 				C9FF60D623CD594E009C090C /* z.png */,
 				C98EEA7E23CAD0120027F2CB /* HKDebug.swift */,
-				C98A97E623CF53EB00DABB3E /* HKSizeCalculationBasis.swift */,
 				C9E4F1A323CE5A5F00E7E1B1 /* HKUIButton.swift */,
 				C956A08323CF586500147EBE /* HKUIImageView.swift */,
 				C98EEA7A23CACFF40027F2CB /* HKUIKeyboardManager.swift */,
@@ -133,14 +138,6 @@
 			path = HKKBMDemo;
 			sourceTree = "<group>";
 		};
-		CCD9CDC6EE1C601E01F78913 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EDE58D5888F82A2742B385A9 /* libPods-HKKBMDemo.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,7 +145,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C98EEA7423CA93E00027F2CB /* Build configuration list for PBXNativeTarget "HKKBMDemo" */;
 			buildPhases = (
-				8DBB89B06AA55980A9A93186 /* [CP] Check Pods Manifest.lock */,
+				2AD3CFEE0FABEC7077AAFA1A /* [CP] Check Pods Manifest.lock */,
 				C98EEA5C23CA93D80027F2CB /* Sources */,
 				C98EEA5D23CA93D80027F2CB /* Frameworks */,
 				C98EEA5E23CA93D80027F2CB /* Resources */,
@@ -215,7 +212,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8DBB89B06AA55980A9A93186 /* [CP] Check Pods Manifest.lock */ = {
+		2AD3CFEE0FABEC7077AAFA1A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,7 +251,6 @@
 				C9E4F1A423CE5A6000E7E1B1 /* HKUIButton.swift in Sources */,
 				C98EEA6423CA93D80027F2CB /* AppDelegate.swift in Sources */,
 				C98EEA7C23CACFF40027F2CB /* HKUIKeyboardManager.swift in Sources */,
-				C98A97E723CF53EB00DABB3E /* HKSizeCalculationBasis.swift in Sources */,
 				C98EEA6623CA93D80027F2CB /* SceneDelegate.swift in Sources */,
 				C98EEA7F23CAD0120027F2CB /* HKDebug.swift in Sources */,
 			);
@@ -398,7 +394,7 @@
 		};
 		C98EEA7523CA93E00027F2CB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F3197594148A718AA0C1027 /* Pods-HKKBMDemo.debug.xcconfig */;
+			baseConfigurationReference = 0F3056CB45462916A1D97B02 /* Pods-HKKBMDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -418,7 +414,7 @@
 		};
 		C98EEA7623CA93E00027F2CB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07B01514E4DE888F6038A6B0 /* Pods-HKKBMDemo.release.xcconfig */;
+			baseConfigurationReference = 0A10C7F08748DB4913907945 /* Pods-HKKBMDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

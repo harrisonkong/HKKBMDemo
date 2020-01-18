@@ -34,10 +34,11 @@
 
 //  Dependencies
 //  -----------------------------------------------------------------
-//  HKSizeCalculationBasis      >= 1.0.0
+//  HKLengthCalculationBasis    >= 1.0.0
 //  HKUIViewUtilities           >= 1.0.0
 
 import UIKit
+import HKLengthCalculationBasis
 import HKUIViewUtilities
 
 extension UIView {
@@ -52,8 +53,8 @@ extension UIView {
     // MARK: - Private Methods
     // MARK: -
     
-    @objc func autoCornerRoundingBasis() -> HKSizeCalculationBasis {
-        return HKSizeCalculationBasis.shorterEdge
+    @objc func autoCornerRoundingBasis() -> HKLengthCalculationBasis {
+        return HKLengthCalculationBasis.shorterEdge
     }
     
     @objc func autoCornerRoundingConstant() -> CGFloat {

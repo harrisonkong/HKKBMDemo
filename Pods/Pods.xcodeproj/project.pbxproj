@@ -7,40 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		280BEB96B5AB9D4AC7183464545528B7 /* Pods-HKKBMDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7A1BD573B3EBA3961527438EB5D190 /* Pods-HKKBMDemo-dummy.m */; };
-		35A34236CF11867647F2D3A6963CFE0C /* HKUIViewUtilities-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BE8D6D11A3064BB962727C36BCD24F /* HKUIViewUtilities-dummy.m */; };
-		4766663701683DD55499DECD4FD0DA09 /* UIView+HKUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6703EB864C2B2A798F90360549EC8C3 /* UIView+HKUtilities.swift */; };
-		85DE8551656BA45D22C9DF7C27BEC19F /* HKUIViewUtilities-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F97F292035F8F935A6FC0D741A467B1E /* HKUIViewUtilities-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A29742782283BC4431FF15BEA1D8927A /* Pods-HKKBMDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82A0F6F744A5397B4791289CAD6A36FB /* Pods-HKKBMDemo-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1B0AE8246EF64F950860972149BD2B86 /* HKLengthCalculationBasis-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF6EB416F6EC6E0499159888AE044F87 /* HKLengthCalculationBasis-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		35A34236CF11867647F2D3A6963CFE0C /* HKUIViewUtilities-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 068BD30C57BB31BCCB14FC8451376081 /* HKUIViewUtilities-dummy.m */; };
+		4766663701683DD55499DECD4FD0DA09 /* UIView+HKUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B861438A6313F68C07548CE865E74D /* UIView+HKUtilities.swift */; };
+		4CEEC9207FE34CA8B68DAF74AF2D4E73 /* Pods-HKKBMDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82A0F6F744A5397B4791289CAD6A36FB /* Pods-HKKBMDemo-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6F719FBB9DF0F5F26241C6D01B303864 /* HKLengthCalculationBasis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E118A60D57A30B6F6BA99F2241AAA18 /* HKLengthCalculationBasis.swift */; };
+		836E71670094DE0834CF576EECC1596F /* HKLengthCalculationBasis-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 028313D6E13D805FB7006934D3D7E328 /* HKLengthCalculationBasis-dummy.m */; };
+		85DE8551656BA45D22C9DF7C27BEC19F /* HKUIViewUtilities-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C5705976AA770A9B7FFF3F27BD170E6 /* HKUIViewUtilities-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D818295AB7CBD83DC34B5585AE7C3D8D /* Pods-HKKBMDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7A1BD573B3EBA3961527438EB5D190 /* Pods-HKKBMDemo-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3ACF79467FE00B4AAB5156B5C08511C8 /* PBXContainerItemProxy */ = {
+		171E1C3FE5EC743952630F2537975EE6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 63F33DA0C4371EA2D8D9EB6338DD8861;
 			remoteInfo = HKUIViewUtilities;
 		};
+		649CAA7A4020864AB0042B7132243ED2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3EEED12F7C64F8566B38B76403E9B2F;
+			remoteInfo = HKLengthCalculationBasis;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11BFBDAA408191792A60DCC944F76325 /* HKUIViewUtilities-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HKUIViewUtilities-prefix.pch"; sourceTree = "<group>"; };
+		028313D6E13D805FB7006934D3D7E328 /* HKLengthCalculationBasis-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HKLengthCalculationBasis-dummy.m"; sourceTree = "<group>"; };
+		068BD30C57BB31BCCB14FC8451376081 /* HKUIViewUtilities-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HKUIViewUtilities-dummy.m"; sourceTree = "<group>"; };
 		2657F85A46AE890049C35F411B28BA1D /* Pods-HKKBMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HKKBMDemo.release.xcconfig"; sourceTree = "<group>"; };
-		3CBD17F3AFEAA2F0B3771AF7FE3C8D70 /* HKUIViewUtilities.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HKUIViewUtilities.xcconfig; sourceTree = "<group>"; };
+		2E118A60D57A30B6F6BA99F2241AAA18 /* HKLengthCalculationBasis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HKLengthCalculationBasis.swift; path = HKLengthCalculationBasis/HKLengthCalculationBasis.swift; sourceTree = "<group>"; };
+		34B861438A6313F68C07548CE865E74D /* UIView+HKUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+HKUtilities.swift"; path = "HKUIViewUtilities/UIView+HKUtilities.swift"; sourceTree = "<group>"; };
 		4134D4013206C78C5CF3B555A9C89AB6 /* Pods-HKKBMDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HKKBMDemo.modulemap"; sourceTree = "<group>"; };
+		4C5705976AA770A9B7FFF3F27BD170E6 /* HKUIViewUtilities-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HKUIViewUtilities-umbrella.h"; sourceTree = "<group>"; };
+		63754BEB181C14A0867E29E8A2D0E7D6 /* libHKLengthCalculationBasis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHKLengthCalculationBasis.a; path = libHKLengthCalculationBasis.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A065F52A425FAE700903160B51DC6A /* Pods-HKKBMDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HKKBMDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		7BE67689E4456E542E7A9603A642D377 /* HKLengthCalculationBasis.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HKLengthCalculationBasis.xcconfig; sourceTree = "<group>"; };
 		82A0F6F744A5397B4791289CAD6A36FB /* Pods-HKKBMDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HKKBMDemo-umbrella.h"; sourceTree = "<group>"; };
-		89BE8D6D11A3064BB962727C36BCD24F /* HKUIViewUtilities-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HKUIViewUtilities-dummy.m"; sourceTree = "<group>"; };
+		8589B35BD8B70A1705F9DE641EF44E42 /* HKUIViewUtilities.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HKUIViewUtilities.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B6703EB864C2B2A798F90360549EC8C3 /* UIView+HKUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+HKUtilities.swift"; path = "HKUIViewUtilities/UIView+HKUtilities.swift"; sourceTree = "<group>"; };
-		B6BF9D85644F047F8BFD94FB0335EDAF /* HKUIViewUtilities.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HKUIViewUtilities.modulemap; sourceTree = "<group>"; };
+		C32C94A716B0F8EF32B622A361E8EB1F /* HKUIViewUtilities-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HKUIViewUtilities-prefix.pch"; sourceTree = "<group>"; };
 		CA1295E6963E3FEC3929BFF4463E739F /* Pods-HKKBMDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HKKBMDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CED1D73EF14D8508DB2908EB70601F03 /* HKLengthCalculationBasis.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HKLengthCalculationBasis.modulemap; sourceTree = "<group>"; };
 		E4FBA3B6DD5145E13BC6209A3E276AA0 /* libPods-HKKBMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HKKBMDemo.a"; path = "libPods-HKKBMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7A1BD573B3EBA3961527438EB5D190 /* Pods-HKKBMDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HKKBMDemo-dummy.m"; sourceTree = "<group>"; };
+		F39C24822B15150D7088A2C49A8E22DF /* HKLengthCalculationBasis-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HKLengthCalculationBasis-prefix.pch"; sourceTree = "<group>"; };
 		F8A5995FE8A1E993A28B07075673A47D /* Pods-HKKBMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HKKBMDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		F97F292035F8F935A6FC0D741A467B1E /* HKUIViewUtilities-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HKUIViewUtilities-umbrella.h"; sourceTree = "<group>"; };
+		F99A8A72244E1CA7BFE6745F2B430853 /* HKUIViewUtilities.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HKUIViewUtilities.modulemap; sourceTree = "<group>"; };
 		FE2D1351F38A5F80ADBCB2A2247212C6 /* libHKUIViewUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHKUIViewUtilities.a; path = libHKUIViewUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF6EB416F6EC6E0499159888AE044F87 /* HKLengthCalculationBasis-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HKLengthCalculationBasis-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +68,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3EF797D3C15FA055E64491CB60197B1 /* Frameworks */ = {
+		949A23443B73067AA96363D8FF9F9A8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97332BD27FD06AADDD174794DE1566BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,13 +85,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		221767D2EB3CC69934AA746E98A57B32 /* Products */ = {
+		1541DC62C85841D12861AD0A179326D0 /* HKUIViewUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				FE2D1351F38A5F80ADBCB2A2247212C6 /* libHKUIViewUtilities.a */,
-				E4FBA3B6DD5145E13BC6209A3E276AA0 /* libPods-HKKBMDemo.a */,
+				34B861438A6313F68C07548CE865E74D /* UIView+HKUtilities.swift */,
+				94500D67A5E70A21601E2CC51357C34B /* Support Files */,
 			);
-			name = Products;
+			name = HKUIViewUtilities;
+			path = HKUIViewUtilities;
+			sourceTree = "<group>";
+		};
+		19900C815A63A91B9938A58D4F4867FC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CED1D73EF14D8508DB2908EB70601F03 /* HKLengthCalculationBasis.modulemap */,
+				7BE67689E4456E542E7A9603A642D377 /* HKLengthCalculationBasis.xcconfig */,
+				028313D6E13D805FB7006934D3D7E328 /* HKLengthCalculationBasis-dummy.m */,
+				F39C24822B15150D7088A2C49A8E22DF /* HKLengthCalculationBasis-prefix.pch */,
+				FF6EB416F6EC6E0499159888AE044F87 /* HKLengthCalculationBasis-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HKLengthCalculationBasis";
 			sourceTree = "<group>";
 		};
 		6C6D943078DB642DB1F601CF9003A3A0 /* Pods-HKKBMDemo */ = {
@@ -85,25 +123,46 @@
 			path = "Target Support Files/Pods-HKKBMDemo";
 			sourceTree = "<group>";
 		};
-		72A6BBB4FB8A503496215479522BAF56 /* Pods */ = {
+		8591BC8041CA8B6EE47D35D6E721D1D2 /* HKLengthCalculationBasis */ = {
 			isa = PBXGroup;
 			children = (
-				ECD67F6BE65480C55254B8C23C1B83E5 /* HKUIViewUtilities */,
+				2E118A60D57A30B6F6BA99F2241AAA18 /* HKLengthCalculationBasis.swift */,
+				19900C815A63A91B9938A58D4F4867FC /* Support Files */,
 			);
-			name = Pods;
+			name = HKLengthCalculationBasis;
+			path = HKLengthCalculationBasis;
 			sourceTree = "<group>";
 		};
-		83AF182DADFE2D57CDFE60742C2985B0 /* Support Files */ = {
+		94500D67A5E70A21601E2CC51357C34B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B6BF9D85644F047F8BFD94FB0335EDAF /* HKUIViewUtilities.modulemap */,
-				3CBD17F3AFEAA2F0B3771AF7FE3C8D70 /* HKUIViewUtilities.xcconfig */,
-				89BE8D6D11A3064BB962727C36BCD24F /* HKUIViewUtilities-dummy.m */,
-				11BFBDAA408191792A60DCC944F76325 /* HKUIViewUtilities-prefix.pch */,
-				F97F292035F8F935A6FC0D741A467B1E /* HKUIViewUtilities-umbrella.h */,
+				F99A8A72244E1CA7BFE6745F2B430853 /* HKUIViewUtilities.modulemap */,
+				8589B35BD8B70A1705F9DE641EF44E42 /* HKUIViewUtilities.xcconfig */,
+				068BD30C57BB31BCCB14FC8451376081 /* HKUIViewUtilities-dummy.m */,
+				C32C94A716B0F8EF32B622A361E8EB1F /* HKUIViewUtilities-prefix.pch */,
+				4C5705976AA770A9B7FFF3F27BD170E6 /* HKUIViewUtilities-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/HKUIViewUtilities";
+			sourceTree = "<group>";
+		};
+		A291E0F4C2C5C50FFCB6C5DDDF4C57EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63754BEB181C14A0867E29E8A2D0E7D6 /* libHKLengthCalculationBasis.a */,
+				FE2D1351F38A5F80ADBCB2A2247212C6 /* libHKUIViewUtilities.a */,
+				E4FBA3B6DD5145E13BC6209A3E276AA0 /* libPods-HKKBMDemo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B831AD7E6F335A2FF070073ACF007604 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8591BC8041CA8B6EE47D35D6E721D1D2 /* HKLengthCalculationBasis */,
+				1541DC62C85841D12861AD0A179326D0 /* HKUIViewUtilities */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BF47B6B77D0370DFF19AAA6949E6B553 /* Targets Support Files */ = {
@@ -119,8 +178,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				72A6BBB4FB8A503496215479522BAF56 /* Pods */,
-				221767D2EB3CC69934AA746E98A57B32 /* Products */,
+				B831AD7E6F335A2FF070073ACF007604 /* Pods */,
+				A291E0F4C2C5C50FFCB6C5DDDF4C57EF /* Products */,
 				BF47B6B77D0370DFF19AAA6949E6B553 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -130,16 +189,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		ECD67F6BE65480C55254B8C23C1B83E5 /* HKUIViewUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				B6703EB864C2B2A798F90360549EC8C3 /* UIView+HKUtilities.swift */,
-				83AF182DADFE2D57CDFE60742C2985B0 /* Support Files */,
-			);
-			name = HKUIViewUtilities;
-			path = HKUIViewUtilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,11 +202,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D949682F95025779AFF718CBD250EBC4 /* Headers */ = {
+		38715B1398EB4A07AC48C6C59586D2B2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A29742782283BC4431FF15BEA1D8927A /* Pods-HKKBMDemo-umbrella.h in Headers */,
+				1B0AE8246EF64F950860972149BD2B86 /* HKLengthCalculationBasis-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FF19510B153B42EC2761DBC640B5D14 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CEEC9207FE34CA8B68DAF74AF2D4E73 /* Pods-HKKBMDemo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,16 +223,17 @@
 /* Begin PBXNativeTarget section */
 		494147299AEA1A3BBF328F5BA61D33EF /* Pods-HKKBMDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 73BC0E3BE27D97D52FCE9B57FC2B34BC /* Build configuration list for PBXNativeTarget "Pods-HKKBMDemo" */;
+			buildConfigurationList = 6A94CB51FFC794CFD2DCD80309FA6C3B /* Build configuration list for PBXNativeTarget "Pods-HKKBMDemo" */;
 			buildPhases = (
-				D949682F95025779AFF718CBD250EBC4 /* Headers */,
-				7ABFBD7655296D0B531D7473840D6A01 /* Sources */,
-				D3EF797D3C15FA055E64491CB60197B1 /* Frameworks */,
+				7FF19510B153B42EC2761DBC640B5D14 /* Headers */,
+				BCFBB5C34A8FC98AF8191452A02E2832 /* Sources */,
+				97332BD27FD06AADDD174794DE1566BD /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9F68FAB6524214A6B23C0945A9514980 /* PBXTargetDependency */,
+				C67470B9FCFD858468F7450AC6625839 /* PBXTargetDependency */,
+				666C75F9CE6FD35C9FB383CEA6028A45 /* PBXTargetDependency */,
 			);
 			name = "Pods-HKKBMDemo";
 			productName = "Pods-HKKBMDemo";
@@ -200,6 +258,24 @@
 			productReference = FE2D1351F38A5F80ADBCB2A2247212C6 /* libHKUIViewUtilities.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		A3EEED12F7C64F8566B38B76403E9B2F /* HKLengthCalculationBasis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDF6978D652944112B4F7F4C1A41ACBF /* Build configuration list for PBXNativeTarget "HKLengthCalculationBasis" */;
+			buildPhases = (
+				38715B1398EB4A07AC48C6C59586D2B2 /* Headers */,
+				BFC9898BE95D0E6BE893D31072C1A5FC /* Sources */,
+				949A23443B73067AA96363D8FF9F9A8E /* Frameworks */,
+				8602393258DD6672C32075E40954A2D9 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HKLengthCalculationBasis;
+			productName = HKLengthCalculationBasis;
+			productReference = 63754BEB181C14A0867E29E8A2D0E7D6 /* libHKLengthCalculationBasis.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -218,10 +294,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 221767D2EB3CC69934AA746E98A57B32 /* Products */;
+			productRefGroup = A291E0F4C2C5C50FFCB6C5DDDF4C57EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				A3EEED12F7C64F8566B38B76403E9B2F /* HKLengthCalculationBasis */,
 				63F33DA0C4371EA2D8D9EB6338DD8861 /* HKUIViewUtilities */,
 				494147299AEA1A3BBF328F5BA61D33EF /* Pods-HKKBMDemo */,
 			);
@@ -253,17 +330,33 @@
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/HKUIViewUtilities/HKUIViewUtilities.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/HKUIViewUtilities/HKUIViewUtilities-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
+		8602393258DD6672C32075E40954A2D9 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/HKLengthCalculationBasis/HKLengthCalculationBasis.modulemap",
+				"${PODS_ROOT}/Headers/Public/HKLengthCalculationBasis/HKLengthCalculationBasis-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/HKLengthCalculationBasis-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/HKLengthCalculationBasis/HKLengthCalculationBasis.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/HKLengthCalculationBasis/HKLengthCalculationBasis-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7ABFBD7655296D0B531D7473840D6A01 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				280BEB96B5AB9D4AC7183464545528B7 /* Pods-HKKBMDemo-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7C64EB1B067C1C99C62FD7186D440C4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,14 +366,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BCFBB5C34A8FC98AF8191452A02E2832 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D818295AB7CBD83DC34B5585AE7C3D8D /* Pods-HKKBMDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC9898BE95D0E6BE893D31072C1A5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836E71670094DE0834CF576EECC1596F /* HKLengthCalculationBasis-dummy.m in Sources */,
+				6F719FBB9DF0F5F26241C6D01B303864 /* HKLengthCalculationBasis.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9F68FAB6524214A6B23C0945A9514980 /* PBXTargetDependency */ = {
+		666C75F9CE6FD35C9FB383CEA6028A45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HKUIViewUtilities;
 			target = 63F33DA0C4371EA2D8D9EB6338DD8861 /* HKUIViewUtilities */;
-			targetProxy = 3ACF79467FE00B4AAB5156B5C08511C8 /* PBXContainerItemProxy */;
+			targetProxy = 171E1C3FE5EC743952630F2537975EE6 /* PBXContainerItemProxy */;
+		};
+		C67470B9FCFD858468F7450AC6625839 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HKLengthCalculationBasis;
+			target = A3EEED12F7C64F8566B38B76403E9B2F /* HKLengthCalculationBasis */;
+			targetProxy = 649CAA7A4020864AB0042B7132243ED2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -345,56 +461,34 @@
 			};
 			name = Release;
 		};
-		1A4A9FE2EEED2B9A047D39AF9B30696A /* Debug */ = {
+		44413D0A6ADB7A4557D7C5A149CC1A04 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8A5995FE8A1E993A28B07075673A47D /* Pods-HKKBMDemo.debug.xcconfig */;
+			baseConfigurationReference = 7BE67689E4456E542E7A9603A642D377 /* HKLengthCalculationBasis.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.modulemap";
+				GCC_PREFIX_HEADER = "Target Support Files/HKLengthCalculationBasis/HKLengthCalculationBasis-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/HKLengthCalculationBasis/HKLengthCalculationBasis.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = HKLengthCalculationBasis;
+				PRODUCT_NAME = HKLengthCalculationBasis;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		2BDC3CF7A8E65CCE8E058CA3AB2103C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2657F85A46AE890049C35F411B28BA1D /* Pods-HKKBMDemo.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		4A2AFC89FCC962A39D274EE04B9F7E8C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CBD17F3AFEAA2F0B3771AF7FE3C8D70 /* HKUIViewUtilities.xcconfig */;
+			baseConfigurationReference = 8589B35BD8B70A1705F9DE641EF44E42 /* HKUIViewUtilities.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -420,7 +514,7 @@
 		};
 		4C44F0275DAA96E918C8C56045B0158E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CBD17F3AFEAA2F0B3771AF7FE3C8D70 /* HKUIViewUtilities.xcconfig */;
+			baseConfigurationReference = 8589B35BD8B70A1705F9DE641EF44E42 /* HKUIViewUtilities.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -439,6 +533,79 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F1170CCD0D1F5EFF7C66F4D2AF6CDDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BE67689E4456E542E7A9603A642D377 /* HKLengthCalculationBasis.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/HKLengthCalculationBasis/HKLengthCalculationBasis-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/HKLengthCalculationBasis/HKLengthCalculationBasis.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = HKLengthCalculationBasis;
+				PRODUCT_NAME = HKLengthCalculationBasis;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A58B7B0D1E0916888550D3560EE3339B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2657F85A46AE890049C35F411B28BA1D /* Pods-HKKBMDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E56803BA9FA2E60F9DCD006EAAD8348D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8A5995FE8A1E993A28B07075673A47D /* Pods-HKKBMDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -519,11 +686,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73BC0E3BE27D97D52FCE9B57FC2B34BC /* Build configuration list for PBXNativeTarget "Pods-HKKBMDemo" */ = {
+		6A94CB51FFC794CFD2DCD80309FA6C3B /* Build configuration list for PBXNativeTarget "Pods-HKKBMDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A4A9FE2EEED2B9A047D39AF9B30696A /* Debug */,
-				2BDC3CF7A8E65CCE8E058CA3AB2103C7 /* Release */,
+				E56803BA9FA2E60F9DCD006EAAD8348D /* Debug */,
+				A58B7B0D1E0916888550D3560EE3339B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -533,6 +700,15 @@
 			buildConfigurations = (
 				4C44F0275DAA96E918C8C56045B0158E /* Debug */,
 				4A2AFC89FCC962A39D274EE04B9F7E8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDF6978D652944112B4F7F4C1A41ACBF /* Build configuration list for PBXNativeTarget "HKLengthCalculationBasis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44413D0A6ADB7A4557D7C5A149CC1A04 /* Debug */,
+				9F1170CCD0D1F5EFF7C66F4D2AF6CDDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
