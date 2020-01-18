@@ -111,12 +111,7 @@
 		C98EEA6223CA93D80027F2CB /* HKKBMDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C90D7E4E23CF6B3F00D617E3 /* 1024 x 1024.jpg */,
-				C961132623CD41D000E5986B /* ship-bell.mp3 */,
-				C9FF60DA23CD6689009C090C /* scratch.mp3 */,
-				C961132423CD3B1E00E5986B /* helm.png */,
-				C961132223CD1DEB00E5986B /* sailboat.png */,
-				C9FF60D623CD594E009C090C /* z.png */,
+				C9D2A53823D2FDEF00223F56 /* Resources */,
 				C98EEA7E23CAD0120027F2CB /* HKDebug.swift */,
 				C9E4F1A323CE5A5F00E7E1B1 /* HKUIButton.swift */,
 				C956A08323CF586500147EBE /* HKUIImageView.swift */,
@@ -136,6 +131,19 @@
 				C98EEA7123CA93E00027F2CB /* Info.plist */,
 			);
 			path = HKKBMDemo;
+			sourceTree = "<group>";
+		};
+		C9D2A53823D2FDEF00223F56 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C90D7E4E23CF6B3F00D617E3 /* 1024 x 1024.jpg */,
+				C961132623CD41D000E5986B /* ship-bell.mp3 */,
+				C9FF60DA23CD6689009C090C /* scratch.mp3 */,
+				C961132423CD3B1E00E5986B /* helm.png */,
+				C961132223CD1DEB00E5986B /* sailboat.png */,
+				C9FF60D623CD594E009C090C /* z.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
