@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		280BEB96B5AB9D4AC7183464545528B7 /* Pods-HKKBMDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7A1BD573B3EBA3961527438EB5D190 /* Pods-HKKBMDemo-dummy.m */; };
+		35A34236CF11867647F2D3A6963CFE0C /* HKUIViewUtilities-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BE8D6D11A3064BB962727C36BCD24F /* HKUIViewUtilities-dummy.m */; };
+		4766663701683DD55499DECD4FD0DA09 /* UIView+HKUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6703EB864C2B2A798F90360549EC8C3 /* UIView+HKUtilities.swift */; };
+		85DE8551656BA45D22C9DF7C27BEC19F /* HKUIViewUtilities-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F97F292035F8F935A6FC0D741A467B1E /* HKUIViewUtilities-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A29742782283BC4431FF15BEA1D8927A /* Pods-HKKBMDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82A0F6F744A5397B4791289CAD6A36FB /* Pods-HKKBMDemo-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3ACF79467FE00B4AAB5156B5C08511C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63F33DA0C4371EA2D8D9EB6338DD8861;
+			remoteInfo = HKUIViewUtilities;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11BFBDAA408191792A60DCC944F76325 /* HKUIViewUtilities-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HKUIViewUtilities-prefix.pch"; sourceTree = "<group>"; };
+		2657F85A46AE890049C35F411B28BA1D /* Pods-HKKBMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HKKBMDemo.release.xcconfig"; sourceTree = "<group>"; };
+		3CBD17F3AFEAA2F0B3771AF7FE3C8D70 /* HKUIViewUtilities.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HKUIViewUtilities.xcconfig; sourceTree = "<group>"; };
+		4134D4013206C78C5CF3B555A9C89AB6 /* Pods-HKKBMDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HKKBMDemo.modulemap"; sourceTree = "<group>"; };
+		79A065F52A425FAE700903160B51DC6A /* Pods-HKKBMDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HKKBMDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		82A0F6F744A5397B4791289CAD6A36FB /* Pods-HKKBMDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HKKBMDemo-umbrella.h"; sourceTree = "<group>"; };
+		89BE8D6D11A3064BB962727C36BCD24F /* HKUIViewUtilities-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HKUIViewUtilities-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B6703EB864C2B2A798F90360549EC8C3 /* UIView+HKUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+HKUtilities.swift"; path = "HKUIViewUtilities/UIView+HKUtilities.swift"; sourceTree = "<group>"; };
+		B6BF9D85644F047F8BFD94FB0335EDAF /* HKUIViewUtilities.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HKUIViewUtilities.modulemap; sourceTree = "<group>"; };
+		CA1295E6963E3FEC3929BFF4463E739F /* Pods-HKKBMDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HKKBMDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E4FBA3B6DD5145E13BC6209A3E276AA0 /* libPods-HKKBMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HKKBMDemo.a"; path = "libPods-HKKBMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB7A1BD573B3EBA3961527438EB5D190 /* Pods-HKKBMDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HKKBMDemo-dummy.m"; sourceTree = "<group>"; };
+		F8A5995FE8A1E993A28B07075673A47D /* Pods-HKKBMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HKKBMDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F97F292035F8F935A6FC0D741A467B1E /* HKUIViewUtilities-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HKUIViewUtilities-umbrella.h"; sourceTree = "<group>"; };
+		FE2D1351F38A5F80ADBCB2A2247212C6 /* libHKUIViewUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHKUIViewUtilities.a; path = libHKUIViewUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		765F80CEF7E0F6CB7646C87205462288 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3EF797D3C15FA055E64491CB60197B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		221767D2EB3CC69934AA746E98A57B32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE2D1351F38A5F80ADBCB2A2247212C6 /* libHKUIViewUtilities.a */,
+				E4FBA3B6DD5145E13BC6209A3E276AA0 /* libPods-HKKBMDemo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C6D943078DB642DB1F601CF9003A3A0 /* Pods-HKKBMDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4134D4013206C78C5CF3B555A9C89AB6 /* Pods-HKKBMDemo.modulemap */,
+				CA1295E6963E3FEC3929BFF4463E739F /* Pods-HKKBMDemo-acknowledgements.markdown */,
+				79A065F52A425FAE700903160B51DC6A /* Pods-HKKBMDemo-acknowledgements.plist */,
+				EB7A1BD573B3EBA3961527438EB5D190 /* Pods-HKKBMDemo-dummy.m */,
+				82A0F6F744A5397B4791289CAD6A36FB /* Pods-HKKBMDemo-umbrella.h */,
+				F8A5995FE8A1E993A28B07075673A47D /* Pods-HKKBMDemo.debug.xcconfig */,
+				2657F85A46AE890049C35F411B28BA1D /* Pods-HKKBMDemo.release.xcconfig */,
+			);
+			name = "Pods-HKKBMDemo";
+			path = "Target Support Files/Pods-HKKBMDemo";
+			sourceTree = "<group>";
+		};
+		72A6BBB4FB8A503496215479522BAF56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECD67F6BE65480C55254B8C23C1B83E5 /* HKUIViewUtilities */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		83AF182DADFE2D57CDFE60742C2985B0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6BF9D85644F047F8BFD94FB0335EDAF /* HKUIViewUtilities.modulemap */,
+				3CBD17F3AFEAA2F0B3771AF7FE3C8D70 /* HKUIViewUtilities.xcconfig */,
+				89BE8D6D11A3064BB962727C36BCD24F /* HKUIViewUtilities-dummy.m */,
+				11BFBDAA408191792A60DCC944F76325 /* HKUIViewUtilities-prefix.pch */,
+				F97F292035F8F935A6FC0D741A467B1E /* HKUIViewUtilities-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HKUIViewUtilities";
+			sourceTree = "<group>";
+		};
+		BF47B6B77D0370DFF19AAA6949E6B553 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C6D943078DB642DB1F601CF9003A3A0 /* Pods-HKKBMDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				72A6BBB4FB8A503496215479522BAF56 /* Pods */,
+				221767D2EB3CC69934AA746E98A57B32 /* Products */,
+				BF47B6B77D0370DFF19AAA6949E6B553 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECD67F6BE65480C55254B8C23C1B83E5 /* HKUIViewUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				B6703EB864C2B2A798F90360549EC8C3 /* UIView+HKUtilities.swift */,
+				83AF182DADFE2D57CDFE60742C2985B0 /* Support Files */,
+			);
+			name = HKUIViewUtilities;
+			path = HKUIViewUtilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3669BE3C204BEB1EA839356C0FBAABAD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85DE8551656BA45D22C9DF7C27BEC19F /* HKUIViewUtilities-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D949682F95025779AFF718CBD250EBC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29742782283BC4431FF15BEA1D8927A /* Pods-HKKBMDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		494147299AEA1A3BBF328F5BA61D33EF /* Pods-HKKBMDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73BC0E3BE27D97D52FCE9B57FC2B34BC /* Build configuration list for PBXNativeTarget "Pods-HKKBMDemo" */;
+			buildPhases = (
+				D949682F95025779AFF718CBD250EBC4 /* Headers */,
+				7ABFBD7655296D0B531D7473840D6A01 /* Sources */,
+				D3EF797D3C15FA055E64491CB60197B1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F68FAB6524214A6B23C0945A9514980 /* PBXTargetDependency */,
+			);
+			name = "Pods-HKKBMDemo";
+			productName = "Pods-HKKBMDemo";
+			productReference = E4FBA3B6DD5145E13BC6209A3E276AA0 /* libPods-HKKBMDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		63F33DA0C4371EA2D8D9EB6338DD8861 /* HKUIViewUtilities */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA5A456ECB2888A24C747FA390B31E83 /* Build configuration list for PBXNativeTarget "HKUIViewUtilities" */;
+			buildPhases = (
+				3669BE3C204BEB1EA839356C0FBAABAD /* Headers */,
+				7C64EB1B067C1C99C62FD7186D440C4C /* Sources */,
+				765F80CEF7E0F6CB7646C87205462288 /* Frameworks */,
+				0E2498D3E297710088242CFD6E62C07D /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HKUIViewUtilities;
+			productName = HKUIViewUtilities;
+			productReference = FE2D1351F38A5F80ADBCB2A2247212C6 /* libHKUIViewUtilities.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 221767D2EB3CC69934AA746E98A57B32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63F33DA0C4371EA2D8D9EB6338DD8861 /* HKUIViewUtilities */,
+				494147299AEA1A3BBF328F5BA61D33EF /* Pods-HKKBMDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E2498D3E297710088242CFD6E62C07D /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/HKUIViewUtilities/HKUIViewUtilities.modulemap",
+				"${PODS_ROOT}/Headers/Public/HKUIViewUtilities/HKUIViewUtilities-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/HKUIViewUtilities-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/HKUIViewUtilities/HKUIViewUtilities.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/HKUIViewUtilities/HKUIViewUtilities-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7ABFBD7655296D0B531D7473840D6A01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280BEB96B5AB9D4AC7183464545528B7 /* Pods-HKKBMDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C64EB1B067C1C99C62FD7186D440C4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35A34236CF11867647F2D3A6963CFE0C /* HKUIViewUtilities-dummy.m in Sources */,
+				4766663701683DD55499DECD4FD0DA09 /* UIView+HKUtilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F68FAB6524214A6B23C0945A9514980 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HKUIViewUtilities;
+			target = 63F33DA0C4371EA2D8D9EB6338DD8861 /* HKUIViewUtilities */;
+			targetProxy = 3ACF79467FE00B4AAB5156B5C08511C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1422B121EAEAEA11307496903FA623C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		1A4A9FE2EEED2B9A047D39AF9B30696A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8A5995FE8A1E993A28B07075673A47D /* Pods-HKKBMDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BDC3CF7A8E65CCE8E058CA3AB2103C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2657F85A46AE890049C35F411B28BA1D /* Pods-HKKBMDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A2AFC89FCC962A39D274EE04B9F7E8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CBD17F3AFEAA2F0B3771AF7FE3C8D70 /* HKUIViewUtilities.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/HKUIViewUtilities/HKUIViewUtilities-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/HKUIViewUtilities/HKUIViewUtilities.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = HKUIViewUtilities;
+				PRODUCT_NAME = HKUIViewUtilities;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C44F0275DAA96E918C8C56045B0158E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CBD17F3AFEAA2F0B3771AF7FE3C8D70 /* HKUIViewUtilities.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/HKUIViewUtilities/HKUIViewUtilities-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/HKUIViewUtilities/HKUIViewUtilities.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = HKUIViewUtilities;
+				PRODUCT_NAME = HKUIViewUtilities;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED7888FA6713EABBF66D26A8003AD1CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED7888FA6713EABBF66D26A8003AD1CA /* Debug */,
+				1422B121EAEAEA11307496903FA623C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73BC0E3BE27D97D52FCE9B57FC2B34BC /* Build configuration list for PBXNativeTarget "Pods-HKKBMDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A4A9FE2EEED2B9A047D39AF9B30696A /* Debug */,
+				2BDC3CF7A8E65CCE8E058CA3AB2103C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA5A456ECB2888A24C747FA390B31E83 /* Build configuration list for PBXNativeTarget "HKUIViewUtilities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C44F0275DAA96E918C8C56045B0158E /* Debug */,
+				4A2AFC89FCC962A39D274EE04B9F7E8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

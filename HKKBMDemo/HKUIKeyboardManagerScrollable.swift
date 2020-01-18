@@ -35,6 +35,7 @@
 //  -----------------------------------------------------------------
 //  HKDebug
 //  HKUIKeyboardManager
+//  HKUIViewUtilitities     >= 1.0.0
 //  UIView+HKUtilities
 
 //  How To Use
@@ -225,6 +226,7 @@
 */
 
 import UIKit
+import HKUIViewUtilities
 
 public class HKUIKeyboardManagerScrollable : HKUIKeyboardManager {
   

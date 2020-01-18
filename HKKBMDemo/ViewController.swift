@@ -12,7 +12,7 @@
 //  HKUIButton
 //  HKUIKeyboardManager
 //  HKUIKeyboardManagerScrollable
-//  UIView+HKUtilities
+//  HKUIViewUtilities               >= 1.0.0
 
 import UIKit
 import AVFoundation

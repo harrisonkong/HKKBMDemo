@@ -29,21 +29,18 @@
 //
 //  Version History
 //  -----------------------------------------------------------------
-//  1.0.0     - 2020/01/01 - initial release
-//                           autoCornerRounding
+//  1.0.0     - 2020/01/01 initial release
+//                         - autoCornerRounding
 
 //  Dependencies
 //  -----------------------------------------------------------------
-//  HKAutoSizeCalculationBasis
-//  UIView+HKAutoCornerRounding
-//  UIView+HKUtilities
+//  HKSizeCalculationBasis      >= 1.0.0
+//  HKUIViewUtilities           >= 1.0.0
 
 import UIKit
+import HKUIViewUtilities
 
 extension UIView {
-    
-    // declaring this as an objective C raw Int enum makes it inspectable
-    // in interface builder
 
     // MARK: - Overridden Methods
     // MARK: -
@@ -55,8 +52,8 @@ extension UIView {
     // MARK: - Private Methods
     // MARK: -
     
-    @objc func autoCornerRoundingBasis() -> AutoSizeCalculationBasis {
-        return AutoSizeCalculationBasis.shorterEdge
+    @objc func autoCornerRoundingBasis() -> HKSizeCalculationBasis {
+        return HKSizeCalculationBasis.shorterEdge
     }
     
     @objc func autoCornerRoundingConstant() -> CGFloat {

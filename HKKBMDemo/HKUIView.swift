@@ -29,12 +29,13 @@
  //
  //  Version History
  //  -----------------------------------------------------------------
- //  1.0.0     - 2020/01/01 - initial release
+ //  1.0.0     - 2020/01/01 initial release
+ //                         auto corning rounding
 
  //  Dependencies
  //  -----------------------------------------------------------------
- //  HKAutoSizeCalculationBasis
- //  UIView+HKAutoCornerRounding
+ //  HKSizeCalculationBasis         >= 1.0.0
+ //  UIView+HKAutoCornerRounding    >= 1.0.0
 
  import UIKit
 
@@ -58,7 +59,7 @@
      // 4 = .longerEdge
      // 5 = .constant
      
-     var roundingBasis : AutoSizeCalculationBasis = .shorterEdge
+     var roundingBasis : HKSizeCalculationBasis = .shorterEdge
      
      @IBInspectable var cornerRoundingBasis : Int {
          get {
@@ -69,7 +70,7 @@
              var newIndex = index
              if newIndex < 0 { newIndex = 1 }
              if newIndex > 5 { newIndex = 5 }
-             roundingBasis = AutoSizeCalculationBasis(rawValue: newIndex) ?? .shorterEdge
+             roundingBasis = HKSizeCalculationBasis(rawValue: newIndex) ?? .shorterEdge
              updateCornerRadius()
          }
      }
@@ -109,7 +110,7 @@
      // MARK: - Overridden Methods
      // MARK: -
      
-     override func autoCornerRoundingBasis() -> AutoSizeCalculationBasis {
+     override func autoCornerRoundingBasis() -> HKSizeCalculationBasis {
          return roundingBasis
      }
      

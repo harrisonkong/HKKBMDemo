@@ -1,0 +1,16 @@
+PODS:
+  - HKUIViewUtilities (1.0.0)
+
+DEPENDENCIES:
+  - HKUIViewUtilities (~> 1.0.0)
+
+SPEC REPOS:
+  trunk:
+    - HKUIViewUtilities
+
+SPEC CHECKSUMS:
+  HKUIViewUtilities: fde58cfef72c916510ed32d6622d587ed79992d3
+
+PODFILE CHECKSUM: 69c2ee97f742f1ab930849cba4504abcb02350a1
+
+COCOAPODS: 1.8.4

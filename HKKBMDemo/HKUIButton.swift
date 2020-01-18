@@ -81,7 +81,7 @@ import UIKit
     // 4 = .longerEdge
     // 5 = .constant
     
-    var roundingBasis : AutoSizeCalculationBasis = .shorterEdge
+    var roundingBasis : HKSizeCalculationBasis = .shorterEdge
     
     @IBInspectable var cornerRoundingBasis : Int {
         get {
@@ -92,7 +92,7 @@ import UIKit
             var newIndex = index
             if newIndex < 0 { newIndex = 1 }
             if newIndex > 5 { newIndex = 5 }
-            roundingBasis = AutoSizeCalculationBasis(rawValue: newIndex) ?? .shorterEdge
+            roundingBasis = HKSizeCalculationBasis(rawValue: newIndex) ?? .shorterEdge
             updateCornerRadius()
         }
     }
@@ -124,7 +124,7 @@ import UIKit
     // 4 = .longerEdge
     // 5 = .constant   (not used here, since we can just use the IB font size)
     
-    var titleFontBasis : AutoSizeCalculationBasis = .height
+    var titleFontBasis : HKSizeCalculationBasis = .height
     
     @IBInspectable var AutoSizeTtitleFontBasis : Int {
         get {
@@ -135,7 +135,7 @@ import UIKit
             var newIndex = index
             if newIndex < 0 { newIndex = 1 }
             if newIndex > 4 { newIndex = 4 }
-            titleFontBasis = AutoSizeCalculationBasis(rawValue: newIndex) ?? .shorterEdge
+            titleFontBasis = HKSizeCalculationBasis(rawValue: newIndex) ?? .shorterEdge
             updateTitleFontSize()
         }
     }
@@ -293,7 +293,7 @@ import UIKit
     // MARK: - Overridden Methods
     // MARK: -
     
-    override func autoCornerRoundingBasis() -> AutoSizeCalculationBasis {
+    override func autoCornerRoundingBasis() -> HKSizeCalculationBasis {
         return roundingBasis
     }
     

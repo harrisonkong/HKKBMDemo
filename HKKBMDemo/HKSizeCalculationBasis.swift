@@ -1,6 +1,6 @@
 //
-//  HKAutoSizeCalculationBasis.swift
-//  HK UIView Auto Size Calculation Basis Enum
+//  HKSizeCalculationBasis.swift
+//  HK Size Calculation Basis Enumeration
 //
 
 ///  MIT License
@@ -39,7 +39,7 @@ import Foundation
 // MARK: - Properties
 // MARK: -
     
-@objc public enum AutoSizeCalculationBasis: Int {
+@objc public enum HKSizeCalculationBasis: Int {
     case width = 1
     case height
     case shorterEdge
