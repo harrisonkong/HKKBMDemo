@@ -33,7 +33,7 @@
 
 //  Dependencies
 //  -----------------------------------------------------------------
-//  HKDebug
+//  HKDebug                 >= 1.0.0
 //  HKUIViewUtilities       >= 1.0.0
 
 //  How To Use
@@ -224,6 +224,7 @@
 */
 
 import UIKit
+import HKDebug
 import HKUIViewUtilities
 
 public class HKUIKeyboardManager : NSObject {

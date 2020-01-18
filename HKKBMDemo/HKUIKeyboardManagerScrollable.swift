@@ -33,10 +33,9 @@
 
 //  Dependencies
 //  -----------------------------------------------------------------
-//  HKDebug
+//  HKDebug                 >= 1.0.0
 //  HKUIKeyboardManager
-//  HKUIViewUtilitities     >= 1.0.0
-//  UIView+HKUtilities
+//  HKUIViewUtilities       >= 1.0.0
 
 //  How To Use
 //  -----------------------------------------------------------------
@@ -226,6 +225,7 @@
 */
 
 import UIKit
+import HKDebug
 import HKUIViewUtilities
 
 public class HKUIKeyboardManagerScrollable : HKUIKeyboardManager {

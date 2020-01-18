@@ -1,6 +1,6 @@
 //
 //  HKDebug.swift
-//  HK Debugger
+//  HK Debug System
 //
 
 ///  MIT License
@@ -29,9 +29,9 @@
 //
 //  Version History
 //  -----------------------------------------------------------------
-//  1.0.0     - 2020/01/01 - initial release
+//  1.0.0     - 2020/01/19 initial release
 
-class HKDebug {
+public class HKDebug {
   
   // MARK: - Properties
   // MARK: -

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96E93E411E63FB16DC8C12BD /* libPods-HKKBMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42011E2CCB2D431FEB5DAC14 /* libPods-HKKBMDemo.a */; };
+		8A6F12E3492AADB17A45328B /* libPods-HKKBMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C4F59063C51E13DA032187 /* libPods-HKKBMDemo.a */; };
 		C90D7E4F23CF6B4000D617E3 /* 1024 x 1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C90D7E4E23CF6B3F00D617E3 /* 1024 x 1024.jpg */; };
 		C956A08423CF586500147EBE /* HKUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C956A08323CF586500147EBE /* HKUIImageView.swift */; };
 		C961132323CD1DEB00E5986B /* sailboat.png in Resources */ = {isa = PBXBuildFile; fileRef = C961132223CD1DEB00E5986B /* sailboat.png */; };
@@ -22,7 +22,6 @@
 		C98EEA7023CA93E00027F2CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98EEA6E23CA93E00027F2CB /* LaunchScreen.storyboard */; };
 		C98EEA7C23CACFF40027F2CB /* HKUIKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA7A23CACFF40027F2CB /* HKUIKeyboardManager.swift */; };
 		C98EEA7D23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA7B23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift */; };
-		C98EEA7F23CAD0120027F2CB /* HKDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98EEA7E23CAD0120027F2CB /* HKDebug.swift */; };
 		C9E4F1A423CE5A6000E7E1B1 /* HKUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4F1A323CE5A5F00E7E1B1 /* HKUIButton.swift */; };
 		C9E4F1A623CEF30300E7E1B1 /* UIView+HKAutoCornerRounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4F1A523CEF30300E7E1B1 /* UIView+HKAutoCornerRounding.swift */; };
 		C9FF60D023CD4F20009C090C /* SegueTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF60CF23CD4F20009C090C /* SegueTestViewController.swift */; };
@@ -32,9 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A10C7F08748DB4913907945 /* Pods-HKKBMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKKBMDemo.release.xcconfig"; path = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.release.xcconfig"; sourceTree = "<group>"; };
-		0F3056CB45462916A1D97B02 /* Pods-HKKBMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKKBMDemo.debug.xcconfig"; path = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		42011E2CCB2D431FEB5DAC14 /* libPods-HKKBMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HKKBMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EF71796F48FE8954C0CA489 /* Pods-HKKBMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKKBMDemo.debug.xcconfig"; path = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		6F3BC539C4AB95957C0EED9D /* Pods-HKKBMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKKBMDemo.release.xcconfig"; path = "Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo.release.xcconfig"; sourceTree = "<group>"; };
+		70C4F59063C51E13DA032187 /* libPods-HKKBMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HKKBMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90D7E4E23CF6B3F00D617E3 /* 1024 x 1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1024 x 1024.jpg"; sourceTree = "<group>"; };
 		C956A08323CF586500147EBE /* HKUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKUIImageView.swift; sourceTree = "<group>"; };
 		C961132223CD1DEB00E5986B /* sailboat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sailboat.png; sourceTree = "<group>"; };
@@ -51,7 +50,6 @@
 		C98EEA7123CA93E00027F2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C98EEA7A23CACFF40027F2CB /* HKUIKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKUIKeyboardManager.swift; sourceTree = "<group>"; };
 		C98EEA7B23CACFF40027F2CB /* HKUIKeyboardManagerScrollable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKUIKeyboardManagerScrollable.swift; sourceTree = "<group>"; };
-		C98EEA7E23CAD0120027F2CB /* HKDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKDebug.swift; sourceTree = "<group>"; };
 		C9E4F1A323CE5A5F00E7E1B1 /* HKUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKUIButton.swift; sourceTree = "<group>"; };
 		C9E4F1A523CEF30300E7E1B1 /* UIView+HKAutoCornerRounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+HKAutoCornerRounding.swift"; sourceTree = "<group>"; };
 		C9FF60CF23CD4F20009C090C /* SegueTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueTestViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96E93E411E63FB16DC8C12BD /* libPods-HKKBMDemo.a in Frameworks */,
+				8A6F12E3492AADB17A45328B /* libPods-HKKBMDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,16 +74,16 @@
 		55BE281010C2D44850F0A980 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0F3056CB45462916A1D97B02 /* Pods-HKKBMDemo.debug.xcconfig */,
-				0A10C7F08748DB4913907945 /* Pods-HKKBMDemo.release.xcconfig */,
+				0EF71796F48FE8954C0CA489 /* Pods-HKKBMDemo.debug.xcconfig */,
+				6F3BC539C4AB95957C0EED9D /* Pods-HKKBMDemo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		642F52BAFA0DA10DE45F53FA /* Frameworks */ = {
+		72640CC7EBC1CBA61395A861 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				42011E2CCB2D431FEB5DAC14 /* libPods-HKKBMDemo.a */,
+				70C4F59063C51E13DA032187 /* libPods-HKKBMDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -96,7 +94,7 @@
 				C98EEA6223CA93D80027F2CB /* HKKBMDemo */,
 				C98EEA6123CA93D80027F2CB /* Products */,
 				55BE281010C2D44850F0A980 /* Pods */,
-				642F52BAFA0DA10DE45F53FA /* Frameworks */,
+				72640CC7EBC1CBA61395A861 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				C9D2A53823D2FDEF00223F56 /* Resources */,
-				C98EEA7E23CAD0120027F2CB /* HKDebug.swift */,
 				C9E4F1A323CE5A5F00E7E1B1 /* HKUIButton.swift */,
 				C956A08323CF586500147EBE /* HKUIImageView.swift */,
 				C98EEA7A23CACFF40027F2CB /* HKUIKeyboardManager.swift */,
@@ -153,7 +150,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C98EEA7423CA93E00027F2CB /* Build configuration list for PBXNativeTarget "HKKBMDemo" */;
 			buildPhases = (
-				2AD3CFEE0FABEC7077AAFA1A /* [CP] Check Pods Manifest.lock */,
+				5B6D79A799DA4C83284410F4 /* [CP] Check Pods Manifest.lock */,
 				C98EEA5C23CA93D80027F2CB /* Sources */,
 				C98EEA5D23CA93D80027F2CB /* Frameworks */,
 				C98EEA5E23CA93D80027F2CB /* Resources */,
@@ -220,7 +217,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2AD3CFEE0FABEC7077AAFA1A /* [CP] Check Pods Manifest.lock */ = {
+		5B6D79A799DA4C83284410F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -260,7 +257,6 @@
 				C98EEA6423CA93D80027F2CB /* AppDelegate.swift in Sources */,
 				C98EEA7C23CACFF40027F2CB /* HKUIKeyboardManager.swift in Sources */,
 				C98EEA6623CA93D80027F2CB /* SceneDelegate.swift in Sources */,
-				C98EEA7F23CAD0120027F2CB /* HKDebug.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +398,7 @@
 		};
 		C98EEA7523CA93E00027F2CB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F3056CB45462916A1D97B02 /* Pods-HKKBMDemo.debug.xcconfig */;
+			baseConfigurationReference = 0EF71796F48FE8954C0CA489 /* Pods-HKKBMDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -422,7 +418,7 @@
 		};
 		C98EEA7623CA93E00027F2CB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A10C7F08748DB4913907945 /* Pods-HKKBMDemo.release.xcconfig */;
+			baseConfigurationReference = 6F3BC539C4AB95957C0EED9D /* Pods-HKKBMDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
