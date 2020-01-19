@@ -8,14 +8,15 @@
 
 //  Dependencies
 //  -----------------------------------------------------------------
-//  HKDebug
-//  HKUIButton
+//  HKUIButton                      >= 1.0.0
+//  HKUIImageView                   >= 1.0.0
 //  HKUIKeyboardManager             >= 1.0.0
-//  HKUIViewUtilities               >= 1.0.0
+//  HKUIView                        >= 1.0.0
 
 import UIKit
 import AVFoundation
 import HKUIKeyboardManager
+
 
 class ViewController: UIViewController {
     

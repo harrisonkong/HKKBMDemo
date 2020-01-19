@@ -1,29 +1,48 @@
 PODS:
-  - HKDebug (1.0.0)
-  - HKLengthCalculationBasis (1.0.0)
+  - HKUIButton (1.0.0):
+    - HKUIViewAutoCornerExtension (~> 1.0.0)
+    - HKUIViewLengthCalculationBasis (~> 1.0.0)
+  - HKUIImageView (1.0.0):
+    - HKUIViewAutoCornerExtension (~> 1.0.0)
+    - HKUIViewLengthCalculationBasis (~> 1.0.0)
   - HKUIKeyboardManager (1.0.0):
-    - HKDebug (~> 1.0.0)
     - HKUIViewUtilities (~> 1.0.0)
+  - HKUIView (1.0.0):
+    - HKUIViewAutoCornerExtension (~> 1.0.0)
+    - HKUIViewLengthCalculationBasis (~> 1.0.0)
+  - HKUIViewAutoCornerExtension (1.0.0):
+    - HKUIViewLengthCalculationBasis (~> 1.0.0)
+    - HKUIViewUtilities (~> 1.0.0)
+  - HKUIViewLengthCalculationBasis (1.0.0)
   - HKUIViewUtilities (1.0.0)
 
 DEPENDENCIES:
-  - HKLengthCalculationBasis (~> 1.0.0)
+  - HKUIButton (~> 1.0.0)
+  - HKUIImageView (~> 1.0.0)
   - HKUIKeyboardManager (~> 1.0.0)
-  - HKUIViewUtilities (~> 1.0.0)
+  - HKUIView (~> 1.0.0)
+  - HKUIViewAutoCornerExtension (~> 1.0.0)
+  - HKUIViewLengthCalculationBasis (~> 1.0.0)
 
 SPEC REPOS:
   trunk:
-    - HKDebug
-    - HKLengthCalculationBasis
+    - HKUIButton
+    - HKUIImageView
     - HKUIKeyboardManager
+    - HKUIView
+    - HKUIViewAutoCornerExtension
+    - HKUIViewLengthCalculationBasis
     - HKUIViewUtilities
 
 SPEC CHECKSUMS:
-  HKDebug: 63d88a0d695f3942b882454bd63fba0a5c885ce9
-  HKLengthCalculationBasis: 53c24b3d86f9ff30edd7b57a644329dccdd22799
-  HKUIKeyboardManager: 10f57c1d313439f316caa221899193e3aa97fe64
+  HKUIButton: 12579b8b8a12530a29541e95294c5d6106284775
+  HKUIImageView: 7ecb0596c66a19d2e1ac6987171699edf9ba0271
+  HKUIKeyboardManager: cccddb72815af01c1376b1265d5e4c1183708556
+  HKUIView: 0472041a88ce9d3685a1e31ee5c53ac338b12203
+  HKUIViewAutoCornerExtension: 88729b9b5cc0c1c16fbbc4f89b5d7af6680c6d61
+  HKUIViewLengthCalculationBasis: b4b1b13e203ae0aa303b109b22416601ca1fc687
   HKUIViewUtilities: fde58cfef72c916510ed32d6622d587ed79992d3
 
-PODFILE CHECKSUM: 8096599cb32a910d0a7717a817bba65279e03fcd
+PODFILE CHECKSUM: 96bdd066ced88f66488783f61404a3e96c53b1d6
 
 COCOAPODS: 1.8.4

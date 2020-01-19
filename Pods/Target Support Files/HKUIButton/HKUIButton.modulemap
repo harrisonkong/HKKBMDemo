@@ -1,0 +1,6 @@
+framework module HKUIButton {
+  umbrella header "HKUIButton-umbrella.h"
+
+  export *
+  module * { export * }
+}

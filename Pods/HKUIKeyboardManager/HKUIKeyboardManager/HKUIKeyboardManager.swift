@@ -33,7 +33,6 @@
 
 //  Dependencies
 //  -----------------------------------------------------------------
-//  HKDebug                 >= 1.0.0
 //  HKUIViewUtilities       >= 1.0.0
 
 //  How To Use
@@ -151,7 +150,14 @@
                                               if the active text field is
                                               obscured by the keyboard when it
                                               first receive focus, it will be
-                                              scrolled to above the keyboard
+                                              scrolled to above the keyboard.
+ 
+                                              but if doing so will cause the
+                                              top of the field to extend above
+                                              the top of the screen, it will
+                                              simply be scrolled down so that
+                                              its top is just under the top of
+                                              the screen with a small margin.
  */
      
 //  Development Notes
@@ -224,7 +230,6 @@
 */
 
 import UIKit
-import HKDebug
 import HKUIViewUtilities
 
 public class HKUIKeyboardManager : NSObject {
@@ -257,32 +262,26 @@ public class HKUIKeyboardManager : NSObject {
     // MARK: -
   
     @IBAction func handleCustomGesture(_ sender: UIGestureRecognizer) {
-        HKDebug.print("Custom gesture recognized", category: "IBActions")
         endEditingInAllTextFields()
     }
   
     @IBAction func handlePanGesture(_ sender: UIPanGestureRecognizer) {
-        HKDebug.print("Pan gesture recognized", category: "IBActions")
         if dismissOnPanGestures { endEditingInAllTextFields() }
     }
 
     @IBAction func handlePinchGesture(_ sender: UIPinchGestureRecognizer) {
-        HKDebug.print("Pinch gesture recognized", category: "IBActions")
         if dismissOnPinchGestures { endEditingInAllTextFields() }
     }
  
     @IBAction func handleRotationGesture(_ sender: UIRotationGestureRecognizer) {
-        HKDebug.print("Rotation gesture recognized", category: "IBActions")
         if dismissOnRotationGestures { endEditingInAllTextFields() }
     }
   
     @IBAction func handlePrimaryActionTriggered(_ sender: UITextField) {
-        HKDebug.print("Primary action triggered", category: "IBActions")
         sender.endEditing(true)
     }
   
     @IBAction func handleTapGesture(_ sender: UITapGestureRecognizer) {
-        HKDebug.print("Tap gesture recognized", category: "IBActions")
         if dismissOnTapGestures { endEditingInAllTextFields() }
     }
   
@@ -327,12 +326,6 @@ public class HKUIKeyboardManager : NSObject {
         panGestureRecognizer.require(toFail: rotationGestureRecognizer)
         tapGestureRecognizer.require(toFail: pinchGestureRecognizer)
         tapGestureRecognizer.require(toFail: rotationGestureRecognizer)
-        
-        HKDebug.enable()    // main switch for debug printing
-        
-        HKDebug.deactivateCategory("UserOptions")
-        HKDebug.deactivateCategory("IBActions")
-        
     }
     
     // MARK: - Private Methods
@@ -375,20 +368,15 @@ public class HKUIKeyboardManager : NSObject {
 
        */
     
-        HKDebug.deactivateCategory("preparingSegue()")
-        
         // Rotation while other screen is on top will cause problems
         // Since we are processing segues, let's disable it
         // (see notes 2., 3, and 4. above)
       
         if !dismissDuringDeviceRotation {
           dismissDuringDeviceRotation = true
-          HKDebug.print("***** dismissDuringDeviceRotation set to false but preparing segues!", category: "UserOptions")
-          HKDebug.print("***** dismissDuringDeviceRotation is set to true", category: "UserOptions")
         }
         
         if dismissDuringSegue {
-          HKDebug.print("Dismissing keyboard by endEditing", category: "preparingSegue()")
           endEditingInAllTextFields()
         }
       
@@ -412,14 +400,11 @@ public class HKUIKeyboardManager : NSObject {
   
     public func registerEditableField(_ field: UIView) {
       
-        HKDebug.deactivateCategory("registerEditableField()")
-      
         // register text fields and text views with this class
         //
         // e.g., HKUIKeyboardManager.registerEditableField(txtField)
       
         if !isUITextField(field) && !isUITextView(field) {
-          HKDebug.print("field \(field) is neither a UITextField nor UITextView, registration failed", category: "registerEditableField()")
           return
         }
         
@@ -428,7 +413,6 @@ public class HKUIKeyboardManager : NSObject {
         if isUITextField(field) {
           let textField = field as! UITextField
           textField.addTarget(self, action: #selector(handlePrimaryActionTriggered(_:)), for: .primaryActionTriggered)
-          HKDebug.print("because field \(field) is a UITextField, primary action handler attached", category: "registerEditableField()")
         }
     }
   
@@ -451,27 +435,18 @@ public class HKUIKeyboardManager : NSObject {
        
          */
       
-        HKDebug.deactivateCategory("viewWillTransition()")
-
         // Rotation while other screen is on top will cause problems
         // Since we are processing rotations, let's disable it
         // (see notes 2., 3., and 4. above)
-        
-        HKDebug.print("--- begins ---", category: "viewWillTransition()")
-      
+              
         if !dismissDuringSegue {
             dismissDuringSegue = true
-            HKDebug.print("***** dismissDuringSegue set to false but procesing rotation!", category: "UserOptions")
-            HKDebug.print("***** dismissDuringSegue is set to true", category: "UserOptions")
         }
         
         if dismissDuringDeviceRotation {
-            HKDebug.print("Device rotated - dismissing keyboard by endEditing", category: "viewWillTransition()")
             endEditingInAllTextFields()
         }
-        
-        HKDebug.print("--- ends ---", category: "viewWillTransition()")
-      
+              
     }
     
 }

@@ -1,6 +1,0 @@
-module HKLengthCalculationBasis {
-  umbrella header "HKLengthCalculationBasis-umbrella.h"
-
-  export *
-  module * { export * }
-}

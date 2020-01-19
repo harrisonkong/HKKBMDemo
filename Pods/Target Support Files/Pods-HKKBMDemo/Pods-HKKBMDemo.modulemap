@@ -1,4 +1,4 @@
-module Pods_HKKBMDemo {
+framework module Pods_HKKBMDemo {
   umbrella header "Pods-HKKBMDemo-umbrella.h"
 
   export *

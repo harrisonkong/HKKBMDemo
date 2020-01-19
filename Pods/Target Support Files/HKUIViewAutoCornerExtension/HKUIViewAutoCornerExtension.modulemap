@@ -1,0 +1,6 @@
+framework module HKUIViewAutoCornerExtension {
+  umbrella header "HKUIViewAutoCornerExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

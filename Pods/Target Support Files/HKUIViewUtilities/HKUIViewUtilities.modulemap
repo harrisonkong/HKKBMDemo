@@ -1,4 +1,4 @@
-module HKUIViewUtilities {
+framework module HKUIViewUtilities {
   umbrella header "HKUIViewUtilities-umbrella.h"
 
   export *

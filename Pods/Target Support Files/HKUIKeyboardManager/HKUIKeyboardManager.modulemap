@@ -1,4 +1,4 @@
-module HKUIKeyboardManager {
+framework module HKUIKeyboardManager {
   umbrella header "HKUIKeyboardManager-umbrella.h"
 
   export *

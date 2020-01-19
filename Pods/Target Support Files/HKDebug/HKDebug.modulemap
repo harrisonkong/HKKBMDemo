@@ -1,6 +1,0 @@
-module HKDebug {
-  umbrella header "HKDebug-umbrella.h"
-
-  export *
-  module * { export * }
-}

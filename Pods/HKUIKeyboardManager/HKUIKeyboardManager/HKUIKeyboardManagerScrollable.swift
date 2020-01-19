@@ -33,7 +33,6 @@
 
 //  Dependencies
 //  -----------------------------------------------------------------
-//  HKDebug                 >= 1.0.0
 //  HKUIKeyboardManager     >= 1.0.0
 //  HKUIViewUtilities       >= 1.0.0
 
@@ -153,6 +152,14 @@
                                               obscured by the keyboard when it
                                               first receive focus, it will be
                                               scrolled to above the keyboard
+
+                                              but if doing so will cause the
+                                              top of the field to extend above
+                                              the top of the screen, it will
+                                              simply be scrolled down so that
+                                              its top is just under the top of
+                                              the screen with a small margin.
+
  */
      
 //  Development Notes
@@ -225,7 +232,6 @@
 */
 
 import UIKit
-import HKDebug
 import HKUIViewUtilities
 
 public class HKUIKeyboardManagerScrollable : HKUIKeyboardManager {
@@ -316,30 +322,19 @@ public class HKUIKeyboardManagerScrollable : HKUIKeyboardManager {
   
     private func adjustInsetsForKeyboardHide() {
     
-        HKDebug.deactivateCategory("adjustInsetsForKeyboardHide()")
-      
         guard
           let scrollView = ownerView as? UIScrollView
         else {
             return
         }
     
-        HKDebug.print("----- begins -----", category: "adjustInsetsForKeyboardHide()")
-          
         scrollView.contentInset.bottom = 0.0
         scrollView.verticalScrollIndicatorInsets.bottom = 0.0
-        
-        HKDebug.print("scrollView.contentInset.bottom set to \(scrollView.contentInset.bottom)", category: "adjustInsetsForKeyboardHide()")
-        HKDebug.print("scrollView.verticalScrollIndicatorInsets.bottom set to \(scrollView.verticalScrollIndicatorInsets.bottom)", category: "adjustInsetsForKeyboardHide()")
-        
-        HKDebug.print("----- ends -----", category: "adjustInsetsForKeyboardHide()")
     }
 
     private func adjustInsetsForKeyboardShow() {
     
-        HKDebug.deactivateCategory("adjustInsetsForKeyboardShow()")
-      
-        guard
+       guard
           let cgKeyboardFrame = cgKeyboardFrame,
           let scrollView = ownerView as? UIScrollView,
           let outermostView = outermostView
@@ -347,35 +342,26 @@ public class HKUIKeyboardManagerScrollable : HKUIKeyboardManager {
             return
         }
     
-        HKDebug.print("----- begins -----", category: "adjustInsetsForKeyboardShow()")
-          
         let keyboardHeightReceived = cgKeyboardFrame.height
         var adjustmentHeight = CGFloat(0.0)
-
-        HKDebug.print("keyboardHeightReceived = \(keyboardHeightReceived)", category: "adjustInsetsForKeyboardShow()")
 
         if outermostView.isPortrait() {
             
             // portrait
             
-            HKDebug.print("In portrait mode, maxPortraitKeyboardHeight is \(maxPortraitKeyboardHeight)", category: "adjustInsetsForKeyboardShow()")
             if keyboardHeightReceived > maxPortraitKeyboardHeight {
               maxPortraitKeyboardHeight = keyboardHeightReceived
-              HKDebug.print("keyboardHeightReceived (\(maxPortraitKeyboardHeight)) set as new maxPortraitKeyboardHeight", category: "adjustInsetsForKeyboardShow()")
             }
             adjustmentHeight = maxPortraitKeyboardHeight
             
         } else {  // landscape
             
-            HKDebug.print("In landscape mode, maxLandscapeKeyboardHeight is \(maxLandscapeKeyboardHeight)", category: "adjustInsetsForKeyboardShow()")
             if keyboardHeightReceived > maxLandscapeKeyboardHeight {
               maxLandscapeKeyboardHeight = keyboardHeightReceived
-              HKDebug.print("keyboardHeightReceived (\(keyboardHeightReceived)) set as new maxLandscapeKeyboardHeight", category: "adjustInsetsForKeyboardShow()")
             }
             adjustmentHeight = maxLandscapeKeyboardHeight
         }
                 
-        HKDebug.print("adjustmentHeight is \(adjustmentHeight)", category: "adjustInsetsForKeyboardShow()")
         scrollView.contentInset.bottom += adjustmentHeight
         scrollView.verticalScrollIndicatorInsets.bottom += adjustmentHeight
 
@@ -385,80 +371,48 @@ public class HKUIKeyboardManagerScrollable : HKUIKeyboardManager {
 
         if activeEditableField != nil {
 
-            HKDebug.print("activeEditableField is not nil, scroll if necessary...", category: "adjustInsetsForKeyboardShow()")
             if keepActiveFieldInView {
                 scrollActiveFieldIntoViewIfNecessary()
             }
 
         }
-
-        HKDebug.print("scrollView.contentInset.bottom set to \(scrollView.contentInset.bottom)", category: "adjustInsetsForKeyboardShow()")
-        HKDebug.print("scrollView.verticalScrollIndicatorInsets.bottom set to \(scrollView.verticalScrollIndicatorInsets.bottom)", category: "adjustInsetsForKeyboardShow()")
-        
-        HKDebug.print("----- ends -----", category: "adjustInsetsForKeyboardShow()")
     }
   
     private func getKeyboardFrame(notification: Notification) {
         
-        HKDebug.deactivateCategory("getKeyboardFrame()")
-        
-        HKDebug.print("--- begins ---", category: "getKeyboardFrame()")
         let userInfo = notification.userInfo!
         let keyboardFrame = userInfo [UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
         cgKeyboardFrame = keyboardFrame?.cgRectValue
-        
-        HKDebug.print("keyboard frame saved in instance variable cgKeyboardFrame: \(String(describing: cgKeyboardFrame))", category: "getKeyboardFrame()")
-
-        HKDebug.print("--- ends ---", category: "getKeyboardFrame()")
     }
     
     private func scrollActiveFieldIntoViewIfNecessary() {
 
-        HKDebug.deactivateCategory("scrollActiveField...()")
-        HKDebug.print("--- begins ---", category: "scrollActiveField...()")
-        
         guard let scrollView = ownerView as? UIScrollView,
               let cgKeyboardFrame = cgKeyboardFrame,
               let activeEditableField = activeEditableField
         else {
-            HKDebug.print("cyKeybaordFrame is nil or activeEditableField is nil", category: "scrollActiveField...()")
-            HKDebug.print("--- quits ---", category: "scrollActiveField...()")
             return
         }
       
         let fieldFrame = activeEditableField.frame
 
-        HKDebug.print("activeField.frame = \(fieldFrame)", category: "scrollActiveField...()")
-
         let fieldFrameToScreen = CGRect(x: fieldFrame.minX - scrollView.contentOffset.x, y: fieldFrame.minY - scrollView.contentOffset.y, width: fieldFrame.width, height: fieldFrame.height)
 
-        HKDebug.print("fieldFrameToScreen = \(fieldFrameToScreen)", category: "scrollActiveField...()")
-      
         if fieldFrameToScreen.minY < EDITABLE_FIELD_TOP_MARGIN {
 
           // if the top of the active field is above the top edge, simply
           // scroll it down
-            
-            HKDebug.print("The top of the active field is about the top margin", category: "scrollActiveField...()")
 
             let scrollDelta = abs(fieldFrameToScreen.minY) + EDITABLE_FIELD_TOP_MARGIN
           
             scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x, y: scrollView.contentOffset.y - scrollDelta), animated: true)
-          
-            HKDebug.print("scrollDelta used to scroll downn field into view = \(scrollDelta)", category: "scrollActiveField...()")
-            
+                      
         } else {
                 
-            HKDebug.print("cgkeyboardFrame = \(cgKeyboardFrame)", category: "scrollActiveField...()")
-              
             let autocompleteBarHeight = cgKeyboardFrame.height * 0.25
               
-            HKDebug.print("autocompleteBarHeight calculated to \(autocompleteBarHeight)", category: "scrollActiveField...()")
-
             let keyboardFrameCorrected = CGRect(x: cgKeyboardFrame.minX, y: cgKeyboardFrame.minY - autocompleteBarHeight, width: cgKeyboardFrame.width, height: cgKeyboardFrame.height + autocompleteBarHeight)
 
-            HKDebug.print("keyboardFrameCorrected = \(keyboardFrameCorrected)", category: "scrollActiveField...()")
-            
             // scroll up if behind keyboard
 
             if fieldFrameToScreen.minY + fieldFrameToScreen.height > keyboardFrameCorrected.minY - EDITABLE_FIELD_BOTTOM_MARGIN {
@@ -474,28 +428,21 @@ public class HKUIKeyboardManagerScrollable : HKUIKeyboardManager {
                 }
                 
                scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x, y: scrollView.contentOffset.y + scrollUpDelta ), animated: true)
-
-               HKDebug.print("scrollUpDelta used to scroll field up into view = \(scrollUpDelta)", category: "scrollActiveField...()")
-            }
+           }
         }
-        HKDebug.print("--- ends ---", category: "scrollActiveField...()")
     }
     
     // MARK: - Public Methods
     // MARK: -
 
     @objc func handleTextDidBeginEditing(_ notification: Notification) {
-       HKDebug.deactivateCategory("handleTextDidBeginEditing()")
-       HKDebug.print("--- begins ---", category: "handleTextDidBeginEditing()")
 
        guard let sender = notification.object as? UIView else {
-         HKDebug.print("--- quits ---", category: "handleTextDidBeginEditing()")
            return
        }
 
        if textFieldsAndViews.contains(sender) {
          
-           HKDebug.print("sender saved into instance variable activeEditableField for later...", category: "handleTextDidBeginEditing()")
            activeEditableField = sender
          
            // UITextView receives TextEditingDidBeginNotification after
@@ -504,31 +451,16 @@ public class HKUIKeyboardManagerScrollable : HKUIKeyboardManager {
          
            if isUITextView(sender) {
              
-               HKDebug.print("sender is a UITextView, scrolling if necessary...", category: "handleTextDidBeginEditing()")
-             
                if keepActiveFieldInView && cgKeyboardFrame != nil {
                  scrollActiveFieldIntoViewIfNecessary()
-               } else {
-                 HKDebug.print("cgKeyboardFrame is nil -OR- keepActiveFieldInView set to false, scrolling skipped", category: "handleTextDidBeginEditing()")
                }
            }
 
-       } else {
-           HKDebug.print("sender \(sender) is not registered with this manager, ignoring this notification", category: "handleTextDidBeginEditing()")
        }
-
-       HKDebug.print("--- ends ---", category: "handleTextDidBeginEditing()")
-
     }
 
     @objc func handleTextDidEndEditing(_ notification: Notification) {
-       HKDebug.deactivateCategory("handleTextDidEndEditing()")
-       HKDebug.print("--- begins ---", category: "handleTextDidEndEditing()")
-
        activeEditableField = nil
-       HKDebug.print("activeEditableField set to nil", category: "handleTextDidEndEditing()")
-
-       HKDebug.print("--- ends ---", category: "handleTextDidEndEditing()")
     }
   
     // MARK: - Notification Handlers
@@ -536,44 +468,27 @@ public class HKUIKeyboardManagerScrollable : HKUIKeyboardManager {
 
     @objc func keyboardWillHide(_ notification: Notification) {
 
-        HKDebug.deactivateCategory("keyboardWillHide()")
-        
-        HKDebug.print("--------- begins -----------", category: "keyboardWillHide()")
-
-        if (!keyboardWasShowing) {
-          HKDebug.print("*** Notification ignored - keyboard was already hidden", category: "keyboardWillHide()")
-        } else {
-          HKDebug.print("keyboardWasShowing = \(keyboardWasShowing) ... proceed", category: "keyboardWillHide()")
+       if keyboardWasShowing {
           keyboardWasShowing = false
           cgKeyboardFrame = nil
           adjustInsetsForKeyboardHide()
         }
-        HKDebug.print("--------- ends -------------", category: "keyboardWillHide()")
     }
   
     @objc func keyboardWillShow(_ notification: Notification) {
 
-        HKDebug.deactivateCategory("keyboardWillShow()")
-        
-        HKDebug.print("--------- begins -----------", category: "keyboardWillShow()")
-      
         getKeyboardFrame(notification: notification)
         
         if (keyboardWasShowing) {
-          HKDebug.print("*** Notification ignored - keyboard was already showing", category: "keyboardWillShow()")
           
           if activeEditableField != nil && cgKeyboardFrame != nil && keepActiveFieldInView {
-              HKDebug.print("*** Notification ignored - but let's see if we need to scroll another active text field into view...", category: "keyboardWillShow()")
-              scrollActiveFieldIntoViewIfNecessary()
+             scrollActiveFieldIntoViewIfNecessary()
           }
           
         } else {
-          HKDebug.print("keyboardWasShowing = \(keyboardWasShowing) ... proceed", category: "keyboardWillShow()")
-          keyboardWasShowing = true
+         keyboardWasShowing = true
           adjustInsetsForKeyboardShow()
         }
-        
-        HKDebug.print("--------- ends -------------", category: "keyboardWillShow()")
     }
 
 }

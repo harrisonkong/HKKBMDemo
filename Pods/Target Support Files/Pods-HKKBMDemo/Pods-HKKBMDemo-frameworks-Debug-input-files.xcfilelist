@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-HKKBMDemo/Pods-HKKBMDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/HKUIButton/HKUIButton.framework
+${BUILT_PRODUCTS_DIR}/HKUIImageView/HKUIImageView.framework
+${BUILT_PRODUCTS_DIR}/HKUIKeyboardManager/HKUIKeyboardManager.framework
+${BUILT_PRODUCTS_DIR}/HKUIView/HKUIView.framework
+${BUILT_PRODUCTS_DIR}/HKUIViewAutoCornerExtension/HKUIViewAutoCornerExtension.framework
+${BUILT_PRODUCTS_DIR}/HKUIViewLengthCalculationBasis/HKUIViewLengthCalculationBasis.framework
+${BUILT_PRODUCTS_DIR}/HKUIViewUtilities/HKUIViewUtilities.framework

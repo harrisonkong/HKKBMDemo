@@ -1,12 +1,12 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/HKUIButton" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIImageView" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIKeyboardManager" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIView" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIViewAutoCornerExtension" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIViewLengthCalculationBasis" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIViewUtilities"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/HKDebug" "${PODS_CONFIGURATION_BUILD_DIR}/HKLengthCalculationBasis" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIKeyboardManager" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIViewUtilities"
-OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/HKDebug/HKDebug.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/HKLengthCalculationBasis/HKLengthCalculationBasis.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/HKUIKeyboardManager/HKUIKeyboardManager.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/HKUIViewUtilities/HKUIViewUtilities.modulemap"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"HKDebug" -l"HKLengthCalculationBasis" -l"HKUIKeyboardManager" -l"HKUIViewUtilities" -framework "UIKit"
-OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/HKDebug/HKDebug.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/HKLengthCalculationBasis/HKLengthCalculationBasis.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/HKUIKeyboardManager/HKUIKeyboardManager.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/HKUIViewUtilities/HKUIViewUtilities.modulemap"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/HKUIButton/HKUIButton.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIImageView/HKUIImageView.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIKeyboardManager/HKUIKeyboardManager.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIView/HKUIView.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIViewAutoCornerExtension/HKUIViewAutoCornerExtension.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIViewLengthCalculationBasis/HKUIViewLengthCalculationBasis.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIViewUtilities/HKUIViewUtilities.framework/Headers"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_LDFLAGS = $(inherited) -framework "HKUIButton" -framework "HKUIImageView" -framework "HKUIKeyboardManager" -framework "HKUIView" -framework "HKUIViewAutoCornerExtension" -framework "HKUIViewLengthCalculationBasis" -framework "HKUIViewUtilities" -framework "UIKit"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
-SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/HKDebug" "${PODS_CONFIGURATION_BUILD_DIR}/HKLengthCalculationBasis" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIKeyboardManager" "${PODS_CONFIGURATION_BUILD_DIR}/HKUIViewUtilities"
 USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

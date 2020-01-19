@@ -1,0 +1,6 @@
+framework module HKUIView {
+  umbrella header "HKUIView-umbrella.h"
+
+  export *
+  module * { export * }
+}
