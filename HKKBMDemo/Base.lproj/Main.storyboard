@@ -501,7 +501,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
+            <point key="canvasLocation" x="175" y="113"/>
         </scene>
         <!--Segue Test View Controller-->
         <scene sceneID="7MA-uv-YvX">
@@ -574,7 +574,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgs-id-Ylv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908.69565217391312" y="112.5"/>
+            <point key="canvasLocation" x="912" y="113"/>
         </scene>
     </scenes>
     <resources>
