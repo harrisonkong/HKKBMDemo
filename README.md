@@ -2,6 +2,8 @@
 ![Swift](https://img.shields.io/static/v1?label=Swift&message=5.0%20or%20above&color=%23FF4400&style=plastic) ![iOS](https://img.shields.io/static/v1?label=iOS&&message=13.0%20or%20above&color=yellow&style=plastic) ![License](https://img.shields.io/static/v1?label=license&message=MIT&color=blue&style=plastic) ![Category](https://img.shields.io/static/v1?label=category&message=Demo%20Application&color=blueviolet&style=plastic)
 #### Demo Application for HKUIKeyboardManager ####
 
+<img src='./docs/s1.jpg' width="200" /> <img src='./docs/s2.jpg' width="200" /> <img src='./docs/s3.jpg' width="200" />
+
 <img src="./docs/cloudline.png" alt="---line---">
 
 ## VERSION HISTORY ##
